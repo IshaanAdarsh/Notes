@@ -1,2 +1,2 @@
-# [Yt Video](https://www.youtube.com/watch?v=OtD8wVaFm6E)
-## 1-2
+# [XGBoost](https://www.youtube.com/watch?v=OtD8wVaFm6E)
+# [XGBoost continued](https://www.youtube.com/watch?v=8b1JEDvenQU)
