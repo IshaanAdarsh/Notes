@@ -1,3 +1,4 @@
+# [K-means clustering](https://www.youtube.com/watch?v=4b5d3muPQmA)
 # Unsupervised Learning and Data Clustering
 
 A task involving machine learning may not be linear, but it has a number of well known steps:
