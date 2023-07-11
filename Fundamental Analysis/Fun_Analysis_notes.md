@@ -41,4 +41,25 @@
 - Relies on "soft" or non-quantifiable data.
 - Deals with intangible and imprecise information that is difficult to quantify.
 
+## Introduction to the Annual Report:
+- The annual report is published by corporations and distributed to shareholders and interested parties.
+- It provides current information as of the end of the fiscal year, usually March 31.
+- The primary recipients are current shareholders and prospective investors.
+- The annual report should be the first source of reliable company information.
+- It typically includes sections such as
+  ○ Financial Highlights
+  ○ The Management Statement
+  ○ Management Discussion and Analysis
+  ○ 10-year Financial highlights
+  ○ Corporate Information
+  ○ Director’s Report
+  ○ Report on Corporate governance
+  ○ Financial Section
+  ○ Notice
 
+## P&L Statement (Profit and Loss Statement):
+The Profit and Loss statement reveals what has happened during a specific period of time. The P&L statement provides details regarding the following:
+
+<img width="750" alt="P L Statement" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/1fc77bb6-e4e1-4cc9-a51b-5f47d9979daa">
+
+### 1) 
