@@ -1,5 +1,5 @@
 # Day 1:
-## Fundamental vs Technical analysis:
+## Fundamental vs Technical analysis: 
 ### Fundamental Analysis:
 - Examines economic and financial factors to determine a security's intrinsic value.
 - Considers macroeconomic and microeconomic factors.
