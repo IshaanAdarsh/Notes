@@ -42,20 +42,60 @@
 - Deals with intangible and imprecise information that is difficult to quantify.
 
 ## Introduction to the Annual Report:
-- The annual report is published by corporations and distributed to shareholders and interested parties.
-- It provides current information as of the end of the fiscal year, usually March 31.
-- The primary recipients are current shareholders and prospective investors.
-- The annual report should be the first source of reliable company information.
+- The annual report is published by corporations and distributed to shareholders and interested parties. It provides current information as of the end of the fiscal year, usually March 31.
+- The primary recipients are current shareholders and prospective investors. The annual report should be the first source of reliable company information.
 - It typically includes sections such as
-  ○ Financial Highlights
-  ○ The Management Statement
-  ○ Management Discussion and Analysis
-  ○ 10-year Financial highlights
-  ○ Corporate Information
-  ○ Director’s Report
-  ○ Report on Corporate governance
-  ○ Financial Section
-  ○ Notice
+  - Financial Highlights
+  - The Management Statement
+  - Management Discussion and Analysis
+  - 10-year Financial highlights
+  - Corporate Information
+  - Director’s Report
+  - Report on Corporate governance
+  - Financial Section
+  - Notice
+
+## How to Read an Annual Report:
+### WHY (gives Guided questions) & Time Limit
+- If you are a prospective Investor, or an Employee who wants to know where the company is heading. Guiding questions will help you soert through the information faster and look for the answers. Here sre some of the questions which can be raised by answering WHY:
+  - Do you want to invest in this Company
+  - Does this comapny have exciting Growth Opportunities
+
+- Time limit : 1 hour for Initial Research.
+  - Helps avoid getting stuck in Rabbit holes and allows to see the Bigger Picture.
+ 
+### NARRATIVE AND NUMBERS (50/50):
+- **Narrative**
+  - **Letter to the shareholders:** CEO's aim and the comapnies vision along with thier stratergy and execution.
+  - **Risk Factors:** Familiarise yourself with the risks tht might adversly impact the company.
+- **Numbers**
+  - **1-Page Financial Summary:** Graphs and Tables on what the comapnay considers to be the key performance indicators.
+
+**Financial Statement:** Income Statement, CashFlow satatement and the Balance Sheet to perform independent analysis:
+#### Income Statement:
+Overview of Profit incurred by the company in an year, start with the following step:
+- **Vertical Scan:**
+  - Go up and down the income sattement and look at the key numbers of revenue:
+    - Net sales
+    - Operating Income
+    - Net Income
+  - How are these numbers in the absolute terms and how do they look on a relative basis ( Eg: Operating income as a percentage of revenue). THe Biggest category of cost in the Income statement
+ 
+- **Horizontal Scan:**
+  - Compare the current years numbers with the previous years, is there growth or decline (by what percentage)
+
+#### Cash flow Statement:
+Start with the Main Equation on the Heighest Level
+- Record Starting and Ending Cash Balance of the Year, then calculate the Cash Inflow and Outflow.
+  - **Vertical Scan:** To find the Biggest Line Items
+  - **Horizontal Scan:** To look at Year over Year Changes
+
+#### Balance Sheet:
+Look at what the comapany owns(Assets) and owes(Liabilites and Equity).
+
+
+### SUMMARIZE:
+- Answer your guiding questions and listing the Data Points you based the answers on. If you want to continue the reasearch then define how you are going to dig deeper.
 
 ## P&L Statement (Profit and Loss Statement):
 The Profit and Loss statement reveals what has happened during a specific period of time. The P&L statement provides details regarding the following:
