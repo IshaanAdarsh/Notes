@@ -71,8 +71,8 @@
 - **Numbers**
   - **1-Page Financial Summary:** Graphs and Tables on what the comapnay considers to be the key performance indicators.
 
-**Financial Statement:** Income Statement, CashFlow satatement and the Balance Sheet to perform independent analysis:
-#### Income Statement:
+**Financial Statement:** Perform independent analysis on the following financial documents:
+**Income Statement:**
 Overview of Profit incurred by the company in an year, start with the following step:
 - **Vertical Scan:**
   - Go up and down the income sattement and look at the key numbers of revenue:
@@ -84,17 +84,16 @@ Overview of Profit incurred by the company in an year, start with the following 
 - **Horizontal Scan:**
   - Compare the current years numbers with the previous years, is there growth or decline (by what percentage)
 
-#### Cash flow Statement:
+**Cash flow Statement:**
 Start with the Main Equation on the Heighest Level
 - Record Starting and Ending Cash Balance of the Year, then calculate the Cash Inflow and Outflow.
   - **Vertical Scan:** To find the Biggest Line Items
   - **Horizontal Scan:** To look at Year over Year Changes
 
-#### Balance Sheet:
+**Balance Sheet:**
 Look at what the comapany owns(Assets) and owes(Liabilites and Equity).
 
-
-### SUMMARIZE:
+**SUMMARIZE:**
 - Answer your guiding questions and listing the Data Points you based the answers on. If you want to continue the reasearch then define how you are going to dig deeper.
 
 ## P&L Statement (Profit and Loss Statement):
