@@ -1,4 +1,4 @@
-<img width="492" alt="Note24" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/9294745a-6bf6-4593-9f55-6f8a8cdbc07b"># Day 1:
+# Funadamental Analysis BootCamp:
 ## Fundamental vs Technical analysis: 
 ### Fundamental Analysis:
 - Examines economic and financial factors to determine a security's intrinsic value.
