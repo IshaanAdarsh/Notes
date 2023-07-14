@@ -179,3 +179,4 @@ Formula: EPS = Profit after tax / Number of outstanding shares
 
 <img width="522" alt="EPS" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/13da677a-9ee4-4cde-8ee3-4b81297ef36d">
 
+## Introduction to Balance Sheet:
