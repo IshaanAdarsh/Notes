@@ -205,4 +205,6 @@ Formula: EPS = Profit after tax / Number of outstanding shares
     - Share Capital = FV * Number of shares Therefore,
     - Number of shares = Share Capital / FV
 
-## Total Assets = Total liabilities + Total equity
+> Total Assets = Total liabilities + Total equity
+
+## Cash Flow Statement:
