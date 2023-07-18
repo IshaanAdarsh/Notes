@@ -180,3 +180,25 @@ Formula: EPS = Profit after tax / Number of outstanding shares
 <img width="522" alt="EPS" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/13da677a-9ee4-4cde-8ee3-4b81297ef36d">
 
 ## Introduction to Balance Sheet:
+A Balance Sheet is an overview of what the comapny owns(left) and what a company owes(right) at a point in time.
+
+### Balance Sheet Categories:
+
+<img width="407" alt="Screenshot 2023-07-18 at 11 32 52 PM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/7b3d9e6a-ff4f-440c-988e-c99507826bd9">
+
+### Conceptual Level working of a Balance sheet:
+- **Current Assets:**
+  - Cash and other assets which are expected to be converted to cash within a year
+  - Assets are listed form Most Liquid (top) to least liquid (Bottom)
+- **Non-Current Assets:**
+  - Long term investments that can't be converted to cash quickly
+
+- **Current Liabilites:**
+  - Amounts due to be paid to creditors within twelve months
+  - Liabilities are listed form Due First (top) to Due Last (bottom)
+- **Non-Current Liabilities:**
+  - Longer term laibilities to be paid after the period of one year
+- **Equity:**
+  - Book Value of the shareholder capital
+
+## Total Assets = Total liabilities + Total equity
