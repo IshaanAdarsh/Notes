@@ -180,7 +180,8 @@ Formula: EPS = Profit after tax / Number of outstanding shares
 <img width="522" alt="EPS" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/13da677a-9ee4-4cde-8ee3-4b81297ef36d">
 
 ## Introduction to Balance Sheet:
-A Balance Sheet is an overview of what the comapny owns(left) and what a company owes(right) at a point in time.
+- A Balance Sheet is an overview of what the comapny owns(left) and what a company owes(right) at a point in time. The balance sheet gives us information about the assets, liabilities, and shareholder equity.
+- The balance sheet is prepared on a flow basis, meaning, it has financial information about the company right from the time it was incorporated. It discusses how the company has evolved financially over the years.
 
 ### Balance Sheet Categories:
 
@@ -198,7 +199,10 @@ A Balance Sheet is an overview of what the comapny owns(left) and what a company
   - Liabilities are listed form Due First (top) to Due Last (bottom)
 - **Non-Current Liabilities:**
   - Longer term laibilities to be paid after the period of one year
+  - Total Liability = Shareholders’ Funds + Non-Current Liabilities + Current Liabilities
 - **Equity:**
   - Book Value of the shareholder capital
+    - Share Capital = FV * Number of shares Therefore,
+    - Number of shares = Share Capital / FV
 
 ## Total Assets = Total liabilities + Total equity
