@@ -169,3 +169,17 @@ function addNumbers(num1, num2){
 var sum = addNumbers(4, 60);
 document.write(sum);
 ```
+
+## Accessing HTML Elements:
+- To do this the script tag needs to be below the HTML we need to change or the changes won't take place
+```html
+<h1 id="myHeader" giraffe="Giraffe Attr">🦒</h1>
+<script src="script.js"></script>
+```
+- To change the Values of this HTML file using Js we need to perform the following steps:
+```js
+var header = document.getElementById("myHeader");
+header.style="color:blue; background-color:red;"
+document.write( header.getAttribute("giraffe") );
+header.innerHTML = "Elephant Academy";                    // It will print Elephat Academy in place of the previous HTML
+```
