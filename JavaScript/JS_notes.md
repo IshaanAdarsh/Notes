@@ -53,4 +53,10 @@
 ```
 
 ## Writing HTML using JS:
-
+- Use the document command to write valid HTML using JS.
+- We can adjust where we want to place this HTML by changing the location of the script file
+```js
+document.write("<h1>Hello World!</h1>");
+document.write("<hr>");
+document.write("<p>This is a javascript tutorial</p>");
+```
