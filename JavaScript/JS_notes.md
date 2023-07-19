@@ -183,3 +183,6 @@ header.style="color:blue; background-color:red;"
 document.write( header.getAttribute("giraffe") );
 header.innerHTML = "Elephant Academy";                    // It will print Elephat Academy in place of the previous HTML
 ```
+
+## Event Listeners:
+
