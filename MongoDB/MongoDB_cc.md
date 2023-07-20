@@ -232,5 +232,148 @@ appdb> db.users.find().skip(1)                                // Skips John
 ]
 ```
 ## Complex Query Commands:
-###
+### $eq:
+- Check for equality
+```js
+appdb> db.users.find({ name: { $eq: "Sally" } })            // Get all the users with the name Sally
+[
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  }
+]
+```
 
+### $ne:
+- Check for not equal
+```js
+appdb> db.users.find({ name: { $ne: "Sally" } })                    // Get all users with a name other than Sally
+[
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+```
+
+### $gt / $gte:
+- Check for greater than ($gt) and greater than or equal ($gte) to
+```js
+appdb> db.users.find({ age: { $gt: 20 } })
+[ { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 } ]
+
+appdb> db.users.find({ age: { $gte: 20 } })
+[
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+```
+
+### $lt / $lte:
+- Check for less than ($lt) and less than or equal ($lte) to
+```js
+appdb> db.users.find({ age: { $lt: 20 } })
+[
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  }
+]
+
+appdb> db.users.find({ age: { $lte: 20 } })
+[
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+```
+
+### $in:
+- Check if a value is one of many values
+```js
+appdb> db.users.find({ name: { $in: ["John", "Mike"] } })
+[ { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' } ]
+```
+
+### $nin:
+- Check if a value is none of many values
+```js
+appdb> db.users.find({ name: { $nin: ["Sally", "Mike"] } })
+[
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+```
+
+### $and:
+- Check that multiple conditions are all true
+```js
+// get all users with a name of John and an age of 26
+appdb> db.users.find({ $and: [{ age: 26 }, { name: "John" }] })
+                                                                  \\ No values
+```
+
+### $or:
+- Check that one of multiple conditions is true
+```js
+// get all users with a name of John or an age of 26
+appdb> db.users.find({ $or: [{ age: 26 }, { name: "John" }] })
+[
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 }
+]
+```
+
+### $not:
+- Negate the filter inside of $not
+```js
+// Get all the users with a name other than John
+appdb> db.users.find({ name: { $not: { $eq: "John" } } })
+[
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  },
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+```
+
+### $exists:
+- Check if a field exists
+```js
+// Get all users that have a name field
+appdb> db.users.find({ name: { $exists: true } })
+[
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  }
+]
+```
+
+### $expr:
+- Do comparisons between different fields
+```js
+// Get all users that have a balance that is greater than their debt
+appdb> db.users.find({ $expr: { $gt: [“$balance”, “$debt”] } })
+
+```
