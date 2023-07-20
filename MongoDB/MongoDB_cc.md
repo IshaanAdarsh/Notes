@@ -39,7 +39,7 @@ users
 ```
 
 ### cls:
-- Clears the screen
+- Clears the screen/shell.
 
 ### exit:
 - Closes the mongosh and exits the shell
@@ -54,4 +54,183 @@ appdb>
 -  Something amazing about MongoDB is that we are still in the database appdb, this is because if something doesn't exist in MongoDB and you try to put data in it the server creates that database or collection automatically.
 
 ## Insert Commands:
-### 
+### insertOne:
+- Create a new document inside the specified collection
+- MongoDB already makes a private key (_id) for the element inserted into the collection
+```js
+//simple
+appdb> db.users.insertOne({name: "John"})                  // JSON object
+{
+  acknowledged: true,
+  insertedId: ObjectId("64b8c006d0be38f4602e20b1")
+}
+
+// As there is no schema, you can add how many things in the collection
+appdb> db.users.insertOne({name: "Sally", age: 19, address: {street: "987 North St"}, hobbies: ["Running"]})
+{
+  acknowledged: true,
+  insertedId: ObjectId("64b8c212d0be38f4602e20b2")
+}
+```
+
+### find:
+- Shows the number of entries in the document.
+```js
+// Simple
+appdb> db.users.find()
+[ { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' } ]
+
+//Complex
+appdb> db.users.find()
+[
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  }
+]
+```
+
+### insertMany:
+- Create multi new documents inside a specific collection
+```js
+appdb> db.users.insertMany([{ age: 26 }, { age: 20 }])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("64b8c348d0be38f4602e20b3"),
+    '1': ObjectId("64b8c348d0be38f4602e20b4")
+  }
+}
+
+appdb> db.users.find()
+[
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+```
+
+## Basic Query Commands (Read and Read Modifiers):
+### find variations:
+- **find()**
+  - Get all Documents if params not specified
+```js
+appdb> db.users.find()
+[
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  },
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+
+appdb> db.users.find({name: "Sally"})                      // Paramaeter is specified
+[
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  }
+]
+```
+
+- **find(<filterObject>)**
+  - Find all documents that match the filter object
+```js
+appdb> db.users.find({ name: "John"})
+[ { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' } ]                // Just returns document with the name John
+```
+
+- **find(<filterObject>, <selectObject>)**
+  - Find all documents that match the filter object but only return the field specified in the select object
+```js
+appdb> db.users.find({ name: "Sally" }, { name: 1, age: 1 })              // 1 - Show
+[                                                                         // 0 - Hide
+  { _id: ObjectId("64b8c212d0be38f4602e20b2"), name: 'Sally', age: 19 }
+]
+
+appdb> db.users.find({ name: "Sally" }, { name: 1, age: 1 , _id: 0})
+[ { name: 'Sally', age: 19 } ]
+```
+
+- **findOne**
+  - Returns only the first document which matches the object
+```js
+appdb> db.users.findOne({ name: "John" })
+{ _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' }
+```
+
+### count:
+- **countDocuments**
+  - Return the count of the documents that match the filter object passed to it
+```js
+appdb> db.users.countDocuments({ name: "John"})
+1
+```
+
+### Sort:
+- Sort the results of a find by the given fields (mat hed the first field and then the next)
+```js
+// sort -> 1 = increasing
+// sort -> -1 = decreasing
+
+appdb> db.users.find().sort({ name: 1, age: -1 })
+[
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 },
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  }
+]
+```
+
+### limit:
+- Only returns a set number of documents
+```js
+appdb> db.users.find().limit(2)
+[
+  { _id: ObjectId("64b8c006d0be38f4602e20b1"), name: 'John' },
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  }
+]
+```
+
+### skip:
+- Skips a set number of documents form the beginning
+```js
+appdb> db.users.find().skip(1)                                // Skips John
+[
+  {
+    _id: ObjectId("64b8c212d0be38f4602e20b2"),
+    name: 'Sally',
+    age: 19,
+    address: { street: '987 North St' },
+    hobbies: [ 'Running' ]
+  },
+  { _id: ObjectId("64b8c348d0be38f4602e20b3"), age: 26 },
+  { _id: ObjectId("64b8c348d0be38f4602e20b4"), age: 20 }
+]
+```
+## Complex Query Commands:
+###
+
