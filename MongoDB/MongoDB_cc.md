@@ -377,3 +377,50 @@ appdb> db.users.find({ name: { $exists: true } })
 appdb> db.users.find({ $expr: { $gt: [“$balance”, “$debt”] } })
 
 ```
+
+## Update:
+### updateOne:
+- Update the first document that matches the filter object with the data passed into the second parameter which is the update object.
+```js
+// Update the first user with an age of 20 to the age of 21
+appdb> db.users.updateOne({ age: 20 }, { $set: { age: 21 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+```
+
+### updateMany:
+- Update all documents that matches the filter object with the data passed into the second parameter which is the update object.
+```js
+// Update all users with an age of 12 by adding 3 to their age
+appdb> db.users.updateMany({ age: 26 }, { $inc: { age: 3 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+```
+
+### replaceOne:
+- Replace the first document that matches the filter object with the exact object passed as the second parameter. This will completely overwrite the entire object and not just update individual fields.
+```js
+// Replace the first user with an age of 3 with an object that has the age of 13 as its only field
+appdb> db.users.replaceOne({ age: 3 }, { age: 13 })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+```
+
+
+
+
