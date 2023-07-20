@@ -421,6 +421,105 @@ appdb> db.users.replaceOne({ age: 3 }, { age: 13 })
 }
 ```
 
+### $set:
+- Update only the fields passed to $set. This will not affect any fields not passed to $set.
+```js
+// Update the name of the first user with the age of 21 to the value Hi
+appdb> db.users.updateOne({ age: 21 }, { $set: { name: "Hi" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+```
 
+### $inc:
+- Increment the value of the field by the amount given
+```js
+// Add 2 to the age of the first user with the age of 21
+appdb> db.users.updateOne({ age: 21 }, { $inc: { age: 2 } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+```
 
+### $rename:
+- Rename a field
+```js
+// Rename the field age to years for all users
+appdb> db.users.updateMany({}, { $rename: { age: "years" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+```
 
+### $unset:
+- Remove a field
+```js
+// Remove the age field from the first user with an age of 20
+appdb> db.users.updateOne({ age: 23 }, { $unset: { age: "" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+```
+
+### $push:
+- Add a value to an array field
+```js
+// Add John to the friends array for all users
+appdb> db.users.updateMany({}, { $push: { friends: "Ishaan" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 4,
+  upsertedCount: 0
+}
+```
+
+### $pull:
+- Remove a value from an array field
+```js
+// Remove Mike from the friends array for all users
+appdb> db.users.updateMany({}, { $pull: { friends: "Mike" } })
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+```
+
+## Delete:
+### deleteOne:
+- Delete the first document that matches the filter object
+```js
+// Delete the first user with an age of 29
+appdb> db.users.deleteOne({ years: 29 })
+{ acknowledged: true, deletedCount: 1 }
+```
+
+### deleteMany:
+- Delete all documents that matches the filter object
+```js
+// Delete all users with an age of 12
+appdb> db.users.deleteMany({ age: 12 })
+{ acknowledged: true, deletedCount: 0 }
+```
+
+# DONE
