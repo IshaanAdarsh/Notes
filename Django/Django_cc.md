@@ -39,7 +39,7 @@ This is the main Python package directory that contains all the settings and con
 An empty file that marks the `myproject/` directory as a Python package.
 
 ### `settings.py`: 
-The settings file where you define all the configurations for your Django project, such as database settings, installed apps, middleware, etc.
+The settings file where you define all the configurations for your Django project, such as database settings, installed apps, middleware, etc. [Detailed Information](https://github.com/IshaanAdarsh/TIL/blob/main/Django/Extra%20files/settings_py.md)
 
 ### `urls.py`: 
 The URL configuration file where you define the URL patterns and map them to view functions.
