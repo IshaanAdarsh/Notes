@@ -74,3 +74,67 @@ The new files are:
 - `__pycache__/`: A directory that contains Python cache files for improved import performance.
 - `db.sqlite3`: The SQLite database file where the data for your application is stored.
 
+## Django Server Working:
+Django provides built-in server which we can use to run our project. 
+- `runserver` : This command is used to run built-in server of Django.
+
+### Steps:-
+- Go to Project Folder
+- Then run command `python manage.py runserver`
+  - Server Started. Visit `http://127.0.0.1:8000` or `http://localhost:8000`
+- You can specify Port number in the end to run the project in a specific port: `python manage.py runserver 5555`
+  - Visit http://127.0.0.1:5555 or http://localhost:5555
+
+## Django Application:
+### Creating a Django Application:
+- A Django project contains one or more applications which means we create applications inside ProjectFolder.
+Syntax:- `python manage.py startapp appname`
+**Steps:**
+- Go to Project Folder
+- Run the syntax, if you want to create multiple applications run the syntax multiple times with different appnames.
+```bash
+python manage.py startapp course
+```
+
+### Installing a Django Application:
+- We install application in our project using `settings.py` file. This is compulsory otherwise Application won't be recognized by Django.
+**Steps:**
+- Open `settings.py` file
+- Add the names of the applications to the INSTALLED_APPS field and save `settings.py`
+```python
+# Install the applications course, fees, and result
+INSTALLED APPS = [
+'django.contrib.admin',
+'course',
+'fees',
+'result',
+]
+```
+
+### Application Directory Structure:
+```
+myapp/              # Your application's main directory
+    __init__.py     # An empty file that makes this directory a Python package
+
+    admin.py        # Configuration for the Django admin interface
+    apps.py         # Application configuration
+    models.py       # Database models
+    tests.py        # Test cases for the application
+    views.py        # Views that handle HTTP requests and render templates
+
+    migrations/     # Directory for database migrations
+        __init__.py # An empty file that makes this directory a Python package
+```
+- `__init__.py`: This file is required to treat the `myapp` directory as a Python package.
+
+- `admin.py`: This file is used to register sql tables so we could perform CRUD operations from Admin Application. Admin Application is provided by Django to perform CRUD operation.
+
+- `apps.py`: This is the configuration file for your application. It allows you to customize certain aspects of your app, such as the app's name and label.
+
+- `models.py`: This file is used to create our own model class later these classes will be converted into a database table by Django for our application.
+
+- `tests.py`: This file is for writing test cases to test the functionality of your application.
+
+- `views.py`: This is where you define the views (functions or classes) that handle HTTP requests and return HTTP responses. Views are responsible for processing data and rendering templates. We write all the buisness related logic in this file/
+
+- `migrations/`: This directory is automatically created by Django and is used to store database migration files. Migrations help you manage changes to your database schema over time. It also contains all files that are created after running `makemigration` command (keeps database-related files).
