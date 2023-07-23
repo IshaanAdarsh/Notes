@@ -179,7 +179,9 @@ def index(request):
 - Add the urls for the view funtion.
 ```python
 form course import views               # Need to import the views form the application course
-- urlpatterns = [
+
+# Update the urls to point to the new changes
+urlpatterns = [
   path('admin/', admin site.urls),
   path(learndj/', views.learn_django),
   path('',views.index)                 # '' -> points to the no url so the default http://127.0.0.1:8000
