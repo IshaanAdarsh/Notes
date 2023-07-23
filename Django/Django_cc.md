@@ -182,7 +182,7 @@ form course import views               # Need to import the views form the appli
 - urlpatterns = [
   path('admin/', admin site.urls),
   path(learndj/', views.learn_django),
-  path('',views.index)                 # '' i> points to the no url so the default http://127.0.0.1:8000
+  path('',views.index)                 # '' -> points to the no url so the default http://127.0.0.1:8000
 ]
 ```
 - Visit the URL : http://127.0.0.1:8000          -> Homepage
