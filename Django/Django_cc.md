@@ -44,15 +44,17 @@ The settings file where you define all the configurations for your Django projec
 ### `urls.py`: 
 The URL configuration file where you define the URL patterns and map them to view functions.
 
-### `asgi.py`: 
-The ASGI (Asynchronous Server Gateway Interface) entry-point file used for running Django applications with asynchronous servers. The successor of `wsgi.py` as it provides a standard for both synchronous and asynchronous apps
-
 ### `wsgi.py`: 
 The WSGI (Web Server Gateway Interface) entry-point file used for running Django applications with traditional web servers. Work in this file when you need to interact with the web server
 
 <img width="1385" alt="Wsgi" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/fb75ccf4-5d01-4685-81da-ff7e1361d788">
 
 - Django uses the `DJANGO_SETTINGS_MODULE` environment variable to locate the settings module for your application. It should contain the dotted path to the settings module. If not set, the default `wsgi.py` sets it to `mysite.settings`, where `mysite` is the project name. This allows `runserver` to discover the default settings file automatically. You can use different values for development and production based on your organization of settings.
+
+### `asgi.py`: 
+The ASGI (Asynchronous Server Gateway Interface) entry-point file used for running Django applications with asynchronous servers. The successor of `wsgi.py` as it provides a standard for both synchronous and asynchronous apps
+
+<img width="711" alt="asgi" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/6d34848a-c1ce-4d60-9f09-975293487f46">
 
 When we run the command `python3 manage.py runserver`, some new files are created.
 ```
