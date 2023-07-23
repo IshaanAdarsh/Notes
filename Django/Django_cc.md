@@ -138,3 +138,54 @@ myapp/              # Your application's main directory
 - `views.py`: This is where you define the views (functions or classes) that handle HTTP requests and return HTTP responses. Views are responsible for processing data and rendering templates. We write all the buisness related logic in this file/
 
 - `migrations/`: This directory is automatically created by Django and is used to store database migration files. Migrations help you manage changes to your database schema over time. It also contains all files that are created after running `makemigration` command (keeps database-related files).
+
+# View:
+## Function Based View:
+- A function-based view in Django is a Python function that handles web requests and generates web responses, such as HTML pages, redirects, or error messages.
+- We use `views.py` file of the application to write functions which may contain the business logic of the application, later it is required to define url name for this function in the `urls.py` file of the project.
+  - It takes an `HttpRequest` object as a parameter and returns an `HttpResponse` object to provide the response content.
+```python
+def function_name (request):                          # request -> httpRequest Object
+  return HttpResponse('html/variable/text')           # HttpResponse -> Class
+                                                      # html/variable/text -> httpResponse Object
+```
+
+### Steps:  
+#### 1) Edit the Views.py:
+- Where `HttpResponse` is class which is in `django.http` module so we have to import it before using `HttpResponse`.
+```python
+from django.http import HttpResponse
+
+# Inside views.py different ways to use a funtion
+def learn_django(request):
+  return HttpResponse('Hello Django')                  # Simple Return Statement
+
+def learn_python(request):
+  return HttoResponse('<hI>Hello Puthon</hI>')         # HTML Return Statement
+
+def learn_var(request):
+  a ="<h1>Hello Variable</hi>'                         # HTML using variable
+  return HttpResponse(a)
+
+def learn_math(request):
+  a = 10 + 10                                          # Maths using variable
+  return HttpResponse(a)
+
+def index(request):
+  return HttpResponse('Home Page')                   # To remove the 404 error, need to specify the homepage
+```
+
+#### 2) Edit the Urls.py:
+- Add the urls for the view funtion.
+```python
+form course import views               # Need to import the views form the application course
+- urlpatterns = [
+  path('admin/', admin site.urls),
+  path(learndj/', views.learn_django),
+  path('',views.index)                 # '' i> points to the no url so the default http://127.0.0.1:8000
+]
+```
+- Visit the URL : http://127.0.0.1:8000          -> Homepage
+- Visit the URL : http://127.0.0.1:8000/learndj/ -> Hello Django
+
+
