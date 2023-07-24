@@ -77,6 +77,8 @@
 {{value|time:"H:i""}
 ```
 > Note: from datetime import datetime
-
-Example:- { value date:"SHORT DATE FORMAT" I
-Example:- « value time:"TIME FORMAT" )
+[More Information about Date and Time]()
+```
+{{ value date:"SHORT DATE FORMAT" }}
+{{ value time:"TIME FORMAT" }}
+```
