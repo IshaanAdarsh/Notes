@@ -318,3 +318,60 @@ urlpatterns = [
 Links to viist the applications:
 - http://127.0.0.1:8000/cor/learndj 
 - http://127.0.0.1:8000/cor/learnpy
+
+# Template:
+- A template is a text file. It can generate any text-based format (HTML, XML, CSS, etc). It contains variables, which get replaced with values when the template is evaluated, and tags, which control the logic of the template. Template is used by view function to represent the data to user.
+
+### Creating Templates:
+- We create `templates` folder inside Project Folder,this folder will contain all HTML files.
+- Add templates in `settings.py`
+  - Create a variable `TEMPLATES_DIR` and add it to the `TEMPLATES` List
+
+```python
+# settings.py
+TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
+
+TEMPLATES = [
+  {
+    'DIRS': [TEMPLATES _ DIR],
+    # Directories where the engine should look for template source files, in search order.
+  }
+]
+```
+
+### Writing Template Files:
+- When we create Template file for application we separate business logic and presentation from the application views.py file.
+- We write business logic in views py file and presentation code in template file.
+
+### Rendering Templates Files:
+- Still `views.py` will be responsible to process the template files for this we will use `render()` function in `views.py` file.
+### render ()
+- `render() Function`: It combines a given template with a given context dictionary and returns an HttpResponse object with that rendered text.
+
+`render(request, template_name, context=dict _ name, content_type=MIME_type, status=None, using=None)`
+
+- **request**: The request object used to generate this response. */
+- **template_name**: The full name of a template to use or sequence of template names. If a sequence is given, the first template that exists will be used. */
+- **context**: A dictionary of values to add to the template context. By default, this is an empty dictionary. If a value in the dictionary is callable, the view will call it just before rendering the template.
+- **content_type**: The MIME type to use for the resulting document. Defaults to 'text/html'.
+- **status**: The status code for the response. Defaults to 200.
+- **using**: The NAME of a template engine to use for loading the template.
+
+> */ -> Manatory Fields to include for the reder function to execute
+
+```python
+# views.py
+from django.shortcuts import render
+def function name(request):
+  # Dynamic Data can be written, if else, any python code logic
+    return render(request, template _ name, context=dict name,
+    content_type=MIME_type, status=None, using=None)
+
+# Example:
+def learn django(request):
+  return render(request, 'courseone.html')
+
+# Example:
+def learn django(request):
+  render(request,'courseone.html',context=cname,content_type='application/xhtml+xml')
+```
