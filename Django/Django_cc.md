@@ -150,7 +150,33 @@ def function_name (request):                          # request -> httpRequest O
                                                       # html/variable/text -> httpResponse Object
 ```
 
-### Steps:  
+## URL Dispatcher:
+- To design URLs for app, you create a Python module informally named urls.py. This module is pure Python code and is a mapping between URL path expressions to view functions.
+
+![URL-Dispatcher](https://github.com/IshaanAdarsh/TIL/assets/100434702/af7bcaa9-5450-4375-931e-fea234a800c0)
+
+### path ( )
+`path(route, view, kwargs=None, name=None)` : It returns an element for inclusion in urlpatterns.
+- The route argument must be a string or gettext_lazy() containing a URL pattern with angle brackets (<>) to capture parts of the URL as keyword arguments for the view.
+  - Angle brackets can include converter specifications like <int:id> to limit characters matched and change the variable type passed to the view (e.g., converting to an integer).
+- The view argument is a view function or the result of as view for class-based views.
+It can also be an django.urls.include.
+- The kwargs argument allows you to pass additional arguments to the view function or method. It should be a dictionary.
+- name is used to perform URL reversing.
+
+```python
+# urls.pr Sample Syntax
+urlpatterns = [
+  path(route, view, kwargs=None, name=None)
+]
+
+# urls.py Example
+urlpatterns = [
+  path(learndj/', views.learn_Django, {'check': 'OK'), name= 'learn django'),
+]
+```
+
+### Steps to use View Funtion and URL Dispatcher at Project level:  
 #### 1) Edit the Views.py:
 - Where `HttpResponse` is class which is in `django.http` module so we have to import it before using `HttpResponse`.
 ```python
@@ -178,17 +204,117 @@ def index(request):
 #### 2) Edit the Urls.py:
 - Add the urls for the view funtion.
 ```python
-form course import views               # Need to import the views form the application course
+form course import views                         # Need to import the views form the application course
 
 # Update the urls to point to the new changes
 urlpatterns = [
   path('admin/', admin site.urls),
   path(learndj/', views.learn_django),
-  path('',views.index)                 # '' -> points to the no url so the default http://127.0.0.1:8000
+  path('',views.index),                          # '' -> points to the no url so the default http://127.0.0.1:8000
+  path(altlearndj/, views.learn_Django),         # We can define multiple url for one view function.
 ]
 ```
 - Visit the URL : http://127.0.0.1:8000          -> Homepage
 - Visit the URL : http://127.0.0.1:8000/learndj/ -> Hello Django
 
-## URL Dispatcher:
+### Multiple Application inside Project and their Function Based Views:
+- Add funtions to the `views.py` of the individual applications and then add thier details in the `urls.py` of the main folder.
 
+```python
+# Incorrect urls.py
+# As they have the same name (views), we have to sepcify which views.py we are talking about. Is it the course.view or fees.views
+from course import views
+from fees import views
+  urlpatterns = [
+    path(learndj/', views.learn_django),
+    path(feesdj/', views.fees _django),
+]
+
+# Correct urls.py
+# Method 1: Aliasing
+from course import views as cv
+from fees import views as fv
+  urlpatterns = [
+    path(learndj/', cv.learn_django),
+    path(feesdj/', fv.fees _django),
+]
+
+# Method 2: Individual funtions (More reductive, not preferred)
+urls.py
+from course.views import learn_django
+from fees.views import fees _django
+  urlpatterns = [
+    path (learndj/', learn_django),
+    path (feesdj/', fees_django),
+]
+```
+- But our each application should be independent or less depend on project so we could use our applications in different projects easily without worrying about `urls.py` available in Project Folder. We need to use url pattern inside Application to Reduce the dependency of Application, Enhance Application performance and Reusability of application becomes easy.
+
+### View Funtion and URL Pattern inside Application:  
+#### include():
+- The `include()` function in Python includes another URLconf module using its import path. It can take optional arguments for specifying namespaces and accepts an iterable or a 2-tuple containing URL patterns and application namespaces. This allows for flexible and modular URL configuration.
+- `path(route, view, kwargs=None, name=None)`
+- The view argument is a view function or the result of as view for class-based views. It can also be an django.urls.include.
+
+```python
+# Syntax
+Syntax:-
+include(module, namespace=None)
+include(pattern list)
+include((pattern_ list, app_ namespace), namespace=None)
+
+# Example:
+# Method 1: straight linking
+from django.urls import include, path
+  urlpatterns = [
+    path('cor/', include('course.urls')),
+]
+
+# Method 2: Using Lists
+urlpatterns = [
+  path('cor/', include([
+    path('learndj/', views.learn _django),
+    path('learnpy/', views.learn_python)
+  ])),
+]
+
+# Same as above code:
+otherpatterns = [
+  path('learndj/', views.learn django),
+  path('learnpy/', views.learn python),
+]
+urlpatterns = [
+path('cor/', include(otherpatterns),
+]
+```
+
+### Steps: 
+#### Write URL Pattern inside Application
+- Create an `urls.py` file inside each application (in case multiple application).
+- Write all url pattern related to application, in `urls.py` file available inside application.
+- Include Application's `urls.py` file inside Project's `urls.py` file.
+
+```python
+# views.py in Application Folder
+from django.http import HttpResponse
+def learn_django(request):
+  return HllpResponse('Hello Django')
+def learn_python(request):
+  return HttpResponse(*<hI>Hello Python</hI>')
+
+# urls.py in Application Folder
+from course import views
+  urlpatterns = [
+    path('learndj/', views.learn django),
+    path(learnpy/', views.learn_python),
+]
+
+# urls.py in Project Folder
+from django.urls import path, include
+urlpatterns = [
+  path(cor/, include('course.urls')),          # course -> Package Name, urls -> Module Name
+]
+```
+Links to viist the applications:
+- http://127.0.0.1:8000/cor/learndj 
+- http://127.0.0.1:8000/cor/learnpy
