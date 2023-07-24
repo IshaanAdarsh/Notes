@@ -466,3 +466,54 @@ TEMPLATES = [
 ]
 ```
 
+## Static Files inside Project:
+- CSS files, Javascript Files, image files, video files etc are considered as static files in Django. 
+- Django provides `django.contrib.staticfiles` to help you manage them. `django.contrib.staticfiles` collects static files from each of your applications (and any other places you specify) into a single location that can easily be served in production.
+
+### Steps:
+- We create static folder inside Root Project Folder then inside static folder we create required folders which will contain all static files respectively like css folder will contain all ess files, image folder will contain all images and so on.
+```python
+# Directory Structure:
+geekyshows
+  static
+    CSS
+      style.css
+      custom.css
+    images
+      love.jpg
+      pic1.jpg
+```
+
+#### Add Static in settings.py
+```python
+# settings.py
+TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
+STATIC_DIR = os.path.join(BASE _DIR,'static')
+INSTALLED APPS= [
+      'course'
+]
+TEMPLATES = [
+  {
+    'DIRS': [TEMPLATES_DIR]
+  }
+]
+STATIC URI = "static/
+STATICFILES DIRS = [STATIC DIR]
+```
+
+#### Use Static Files in Template Files
+- First Load Static Files
+- Reference Static Files
+```html
+// templates/course
+// courseone.html
+<!DOCTYPE html>
+{% load static %}      // Loading Static Files
+<html>
+  <link href='{%static "css/stvle.css"%}'>      // Referece Static Files
+    <body>
+      <h1>Fees {{fe}}</h1>
+      <img src='{%static "images/love.jpg"%}>   // Referece Static Files
+    </body>
+</html>
+```
