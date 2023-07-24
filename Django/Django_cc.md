@@ -417,7 +417,7 @@ def learn django(request):
     cname = 'Django'
     duration = '4 Months
     seats = 10
-    django details = ('nm' :cname, 'du': duration, 'st' :seats}
+    django_details = ('nm' :cname, 'du': duration, 'st' :seats}
     return render(request, 'course/courseone.html', django_details)
 ```
 - Write the HTML using the variables
