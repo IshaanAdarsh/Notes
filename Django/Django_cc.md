@@ -430,3 +430,39 @@ def learn django(request):
 </html>
 ```
 
+## Templates inside Application:
+- Create a templates folder inside each application
+  - Check 'APP DIRS': True in settings.py
+```python
+# settings.py
+INSTALLED APP = [
+    'course',
+    'fees'
+]
+
+TEMPLATES = [
+  {
+    'DIRS': [],
+    'APP_DIRS':True,
+  }
+]
+```
+
+## Templates inside and outside the Application:
+- Just add a `DIRS` value to the variable 
+```python
+# settings.py
+TEMPLATES_DIR; = os.path.join(BASE_DIR,'templates')
+INSTALLED APP = [
+    'course',
+    'fees'
+]
+
+TEMPLATES = [
+  {
+    'DIRS': [TEMPLATES_DIR],
+    'APP_DIRS':True,
+  }
+]
+```
+
