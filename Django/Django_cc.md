@@ -375,3 +375,57 @@ def learn django(request):
 def learn django(request):
   render(request,'courseone.html',context=cname,content_type='application/xhtml+xml')
 ```
+
+### Creating and Rendering Templates File For each Application Separately:
+- We can create separate folder inside templates folder for applications then each application will contain only those HTML file which are related to them. This will enhance readability and separate HTML files according to applications.
+
+![Template_naming](https://github.com/IshaanAdarsh/TIL/assets/100434702/865f261c-0f8d-4bda-9433-757517c996f9)
+
+- Follow the same steps for the writing and creating of template files (just make seperate files for more clarity)
+- Just in the Rendering Process of the templates edit the template name to reflect the template path
+
+```python
+# views.py
+def learn django(request):
+  return render(request,'course/courseone.html')          # Reflects the chnae form courseone.html to new location
+```
+
+## Dynamic Template Files using DTL:
+- Use variables in the HTML files using Django Template Language
+```python
+# views.py
+from django.shortcuts import render
+def function name(request):
+  # Dynamic Data, if else, any python code logic
+    return render(request, template _name, context=dict_name, content_type=MIME_type, status=None, using=None)
+
+# views.py
+from django.shortcuts import render
+def learn_django(request):
+  coursename = {'cname': 'Django'}
+  return render(request, 'course/courseone.html', context coursename)
+  # OR
+  return render(request, 'course/courseone. html', coursename)
+  # OR
+  return render(request,'course/courseone.html',{'cname': 'Django'})
+
+# Example:
+# views.py
+from django.shortcuts import render
+def learn django(request):
+    cname = 'Django'
+    duration = '4 Months
+    seats = 10
+    django details = ('nm' :cname, 'du': duration, 'st' :seats}
+    return render(request, 'course/courseone.html', django_details)
+```
+- Write the HTML using the variables
+```html
+// courseone.html
+<html>
+  <body>
+    <h2> Course Name: {{nm}} Duration: {{du}} and Total Seats: {{st}}</h2>
+  </body>
+</html>
+```
+
