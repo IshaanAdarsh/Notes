@@ -391,6 +391,7 @@ def learn django(request):
 ```
 
 ## Dynamic Template Files using DTL:
+- For more detailed information about [DLT](https://github.com/IshaanAdarsh/TIL/blob/main/Django/Detailed%20Information/DLT.md)
 - Use variables in the HTML files using Django Template Language
 ```python
 # views.py
