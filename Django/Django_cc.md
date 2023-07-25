@@ -688,4 +688,38 @@ STATICFILES_DIRS = [STATIC_DIR]
 ```
 
 # Template Inheritance:
+- Template inheritance allows you to build a base "skeleton" template that contains all the common elements of your site and defines blocks that child templates can override.
+- The `extends` tag is used to inherit template. `extend`s tag tells the template engine that this template "extends" another template.When the template system evaluates this template, first it locates the parent let's assume. "base.html".At that point, the template engine will notice the block tags in base. html and replace those blocks with the contents of the child template.
 
+## `extends` tag:
+- `{% extends %}`: The extends tag is used to inherit template. It tells the template engine that this template "extends" another template. It has no end tag.
+```python
+# Syntax:-
+{%extends 'parent_template_name'%}
+{%extends variable%}
+
+# Example:-
+{% extends "./basel.html" %}
+{% extends "../base2.html" %}
+{% extends "./my/base3.html" %}
+{% extends somthing %}
+```
+
+## `block` Tag
+- `{% block %}`: The block tag is used to for overriding specific parts of a template.
+```python
+# Syntax:-
+{% block blockname %} ..... {% endblock %}
+{% block blockname %} ..... {% endblock blockname %}
+
+# Example:-
+{% block title %} .... {% endblock %}
+{% block content %} ..... {% endblock content %}
+```
+
+### Rules
+- If we use {% extends %} in a template, it must be the first template tag in that template. Template inheritance won't work, otherwise.
+- More {% block %} tags in our base templates are better.
+- Child templates don't have to define all parent blocks, so we can fill in reasonable defaults in a number of blocks, then only define the ones we need later.
+- We can't define multiple block tags with the same name in the same template.
+- If We need to get the content of the block from the parent template, the {{block.super}} variable will do the trick.
