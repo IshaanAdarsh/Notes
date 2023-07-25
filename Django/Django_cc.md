@@ -633,3 +633,59 @@ TEMPLATES = [
 STATIC_URL =  '/static/'
 STATICFILES_DIRS = [STATIC_DIR]
 ```
+
+### Use Static Files in Template Files:
+- First Load Static Files
+- Reference Static Files
+```html
+// templates/course
+// courseone.html
+<!DOCTYPE html>
+{%load static %}    // Loading Static Files
+<HTML>
+ <link href=' {%static "course/css/style.css"}>
+  <body>
+    <h1>Fees {{fe}} </h1>
+    <img src=* (%static "course/images/picl.jpg"}>
+  </body>
+</html>
+```
+
+## Static Folder and Files inside Project & Application:
+### Add Static in `settings.py`:
+```python
+# settings.py
+TEMPLATES _DIR; = os.path.join(BASE _DIR,'templates')
+STATIC_DIR = os.path.join(BASE _DIR,'static')
+
+INSTALLED_APPS = [
+    'course'
+]
+
+TEMPLATES = [
+  {
+    'DIRS': [TEMPLATES_DIR]
+  }
+]
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [STATIC_DIR]
+```
+
+### Use Static Files in Template Files:
+- First Load Static Files
+- Reference Static Files
+```html
+<!DOCTYPE html>
+{%load static %}        // Loading Static Files
+<html>
+  <link href= '{%static "css/some.css"}'>
+  <body>
+    <h1>Fees {{fe}} </h1>
+    <img src= '{%static "course/images/picl.jpg"}'>
+  </body>
+</html>
+```
+
+# Template Inheritance:
+
