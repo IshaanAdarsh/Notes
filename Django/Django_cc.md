@@ -729,9 +729,12 @@ STATICFILES_DIRS = [STATIC_DIR]
 -  If no block tags are specified in the child templtes then value is empty or the value written beside the block tag.
 -  Use {{block.super}} to override the previous block
 ```python
-(% block title %}{{block.super}}
-Home{% endblock %}
+(% block title %}
+{{block.super}}
+Home
+{% endblock %}
 ```
+
 ```html
 //Let's say that 2 pages have the same format just the title and the content inside the body changes.
 // We first create a base.html:
@@ -767,3 +770,5 @@ About                                // Adds Home to the base template title
 Hello I am About Page                // Adds Hello I am About page to the base template body
 {% endblock content %}
 ```
+
+
