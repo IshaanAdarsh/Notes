@@ -720,6 +720,50 @@ STATICFILES_DIRS = [STATIC_DIR]
 ### Rules
 - If we use {% extends %} in a template, it must be the first template tag in that template. Template inheritance won't work, otherwise.
 - More {% block %} tags in our base templates are better.
-- Child templates don't have to define all parent blocks, so we can fill in reasonable defaults in a number of blocks, then only define the ones we need later.
+- Child templates don't have to define all parent blocks, so we can fill in reasonable defaults in a number of blocks, then only explain the ones we need later.
 - We can't define multiple block tags with the same name in the same template.
-- If We need to get the content of the block from the parent template, the {{block.super}} variable will do the trick.
+- If We need to get the block's content from the parent template, the {{block.super}} variable will do the trick.
+
+## Creating Base/Parent Template and Child Template:
+- We write common codes in base template and create blocks for code which may vary page to page. Later this template will be inherited by child templates and child template will override created blocks.
+-  If no block tags are specified in the child templtes then value is empty or the value written beside the block tag.
+-  Use {{block.super}} to override the previous block
+```python
+(% block title %}{{block.super}}
+Home{% endblock %}
+```
+```html
+//Let's say that 2 pages have the same format just the title and the content inside the body changes.
+// We first create a base.html:
+// base.html
+<html>
+<head>
+  <title>{% block title %} {% endbock %]</title>
+</head>
+  <body>
+    {% block content %} {% endblock content %}
+  </body>
+</html>
+
+// Then we create home.html, about.html and add whatever the content should be in the title and body
+// home.html
+{% extends 'base.html' %}
+{% block title %}
+Home                                // Adds Home to the base template title
+{% endblock %}
+
+{% block content %}
+Hello I am Home Page                // Adds Hello I am Home page to the base template body
+{% endblock content %}
+
+// about.html
+{% extends 'base.html' %}
+
+{% block title %}
+About                                // Adds Home to the base template title
+{% endblock %}
+
+{% block content %}
+Hello I am About Page                // Adds Hello I am About page to the base template body
+{% endblock content %}
+```
