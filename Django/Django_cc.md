@@ -771,5 +771,14 @@ Hello I am About Page                // Adds Hello I am About page to the base t
 {% endblock content %}
 ```
 
-
+### Create Hyperlinks:
+#### url Tag:
+- `{% url %}`: It returns an absolute path reference (a URL without the domain name) matching a given view and optional parameters. Any special characters in the resulting path will be encoded using iri_to_uri.
+```python
+# Syntax
+{% url 'uriname' %}
+{% url 'urlname' as var %}
+{% url 'urlname' arg1=valuel arg2=value2 %}
+{% url 'urlname' valuel value2 %}
+```
 
