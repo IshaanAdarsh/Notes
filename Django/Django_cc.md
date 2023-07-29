@@ -772,6 +772,7 @@ Hello I am About Page                // Adds Hello I am About page to the base t
 ```
 
 ### Create Hyperlinks:
+##### Revisit [URL Dispatcher](https://github.com/IshaanAdarsh/TIL/blob/main/Django/Django_cc.md#url-dispatcher)
 #### url Tag:
 - `{% url %}`: It returns an absolute path reference (a URL without the domain name) matching a given view and optional parameters. Any special characters in the resulting path will be encoded using iri_to_uri.
 ```python
@@ -782,4 +783,62 @@ Hello I am About Page                // Adds Hello I am About page to the base t
 {% url 'urlname' valuel value2 %}
 ```
 
+```python
+# Easy Implementation:
+urlpatterns = [
+path('about/', views.about),
+]
 
+<a href="/about">About</a>          # Use / because
+
+# Variable Implementation:
+
+# Urls.py
+urlpatterns = [
+path('about/', views.about),
+]
+
+# Views.py
+def about(request):
+  return render(request, 'core/about.html', {'ab':'/about'})
+
+<a href="{{ab}}">About</a>
+
+# Using url tag:
+urlpatterns = [ path('about/', views.about, name='aboutus'),]
+
+# way1:
+<a href="{% url 'aboutus' %}">About</a>
+
+# way2(variable):
+{% url 'aboutus' as abc %}
+<a href="{{abc}}">About</a>
+
+```
+
+### How to include Template within Template:
+-  To reduce clutter we use the include tag.
+
+> For example, you need to add top courses on the website to the main site. But to not clutter the original html template we create another template named topcourse.html and use the include tag to add the contents on that template into the original template for more clean and understandable code.
+#### Include tag:
+- `{% include %}` Tag: It loads a template and renders it with the current context. This is a way of "including" other templates within a template. Each include is a completely independent rendering process.
+- The template name can either be a variable or a hard-coded (quoted) string, in either single or double quotes.
+```python
+# Syntax:
+{% include temp_var_name %}
+{% include "template_name.html" %}
+{% include "folder/template_name.html" %}
+
+# Example:
+{% include topvar %}
+{% include "topcourse.html" %}
+{% include "fees/extrafees.html" %}
+```
+- We can pass additional context explicitly to the template using with keyword.
+```python
+{% include "topcourse.html" with p="PHP" d="Django"%}
+```
+- If we want to render the context only with the variables provided (or even no variables at all), use the only option. No other variables are available to the included template.
+```python
+{% include "topcourse.html" with p="PHP" only %}
+```
