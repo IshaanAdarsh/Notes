@@ -97,3 +97,60 @@ container
       </table>
   </div>
 ```
+
+## [Form](https://getbootstrap.com/docs/5.0/forms/overview/)
+```html
+// Simple Form
+<div class-"container")
+    <form>
+    <label for= "email" class = "form-label">Email</label>
+    <input type="email" id="email" class = "form-control form-contro-lg">
+    // Input goes to the full size of the page
+    // Could adjust the size of the form control according to needs
+    <button>Submit</button>
+    </form>
+</div>
+
+// Disable the input:
+<input type="email" id="email" class = "form-control" disabled>
+    // The box gets greyed out and no pointer
+
+// Readonly:
+<input type="email" id="email" class = "form-control" value = "dickface@gmail.com" readonly>
+    // The box gets a value assigned and cant be edited.
+
+// Plain Text screen:
+- If you want to sho only plain text on the screen could use class = "form-control-plaintext"
+
+// Colour Picker:
+<input type="color" id="email" value ="email@gmall.com" class="form-control form-control-color">
+
+// Range:
+<input type="range" id="email" value ="email@gmall.com" class="form-range">
+    // Dont add form-control class as it looks bad
+
+// Select Box:
+<select class="form-select">
+    <option>One</option>
+    <option>Two</option>
+</select>
+
+// CheckBox:
+// Label is after the input and add "form-check-input" for the above class.
+// Keep the input and label inside a form-check Div.
+<div class="form-check">
+    <Input type="checkbox" Id="email" class="form-check-input" />
+    <label for="email" class-"form-check-label">Email</label>
+</div>
+<button>Submit</button>
+
+// Toggle Switch:
+// COuld apply inline checkboxes by siong the "form-check-inline"
+<div class="form-check form-switch form-check-inline" >
+    <Input type="checkbox" Id="emall" class="form-check-input" />
+    <label for="email" class-"form-check-label">Email</label>
+</div>
+```
+
+## Input Group:
+
