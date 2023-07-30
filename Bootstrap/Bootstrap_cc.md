@@ -152,5 +152,50 @@ container
 </div>
 ```
 
-## Input Group:
+### [Input Group](https://getbootstrap.com/docs/5.0/forms/input-group/):
+- Whatever we put inside the input group, they are placed with a dividing line between them and rounded edges.
+- Used to include text and input elements for the forms to make them more accessible.
+```html
+// Input the amount in dollars in a form
+<form>
+    <label for= "text" class-"form-label">Amount</label>
+        <div class="input-group">
+            <div class-"Input-group-text">$</div>
+            <input type-"number" id-"text" class-"form-control">
+            <button class "btn btn-primary"›+</button>
+        </div>
+    <button>Submit</button>
+</form>
+```
 
+### Floating Labels:
+- Must add placeholder and label should be after input tag.
+```html
+<form>
+    <div class-"form-floating">
+        <input type="email" Id-"email" class= "form-control" placeholder= "Place email here">
+        <label for="email">Email</label>
+    </div>
+    <button>Submit</button>
+</form>
+```
+
+### Form Validation:
+- Add the "required" field to the input tag to make the user add the value compulsorily.
+- To override the form validation use "novalidate" in form
+```html
+<form novalidate>
+    <div class-"form-floating">
+        <input type="email" Id-"email" class= "form-control" placeholder= "Place email here" required>
+        <label for="email">Email</label>
+        //Error Message based on the input value
+        <div class-"invalid-feedback">Invalid email</div>
+        <div class "valid-feedback">Correct email</div>
+    </div>
+    <button>Submit</button>
+</form>
+```
+
+## BootStrap built-in Elements:
+### Button:
+- 
