@@ -139,6 +139,8 @@ myapp/              # Your application's main directory
 
 - `migrations/`: This directory is automatically created by Django and is used to store database migration files. Migrations help you manage changes to your database schema over time. It also contains all files that are created after running `makemigration` command (keeps database-related files).
 
+<hr>
+
 # View:
 ## Function Based View:
 - A function-based view in Django is a Python function that handles web requests and generates web responses, such as HTML pages, redirects, or error messages.
@@ -318,6 +320,8 @@ urlpatterns = [
 Links to viist the applications:
 - http://127.0.0.1:8000/cor/learndj 
 - http://127.0.0.1:8000/cor/learnpy
+
+<hr>
 
 # Template:
 - A template is a text file. It can generate any text-based format (HTML, XML, CSS, etc). It contains variables, which get replaced with values when the template is evaluated, and tags, which control the logic of the template. Template is used by view function to represent the data to user.
@@ -842,3 +846,34 @@ urlpatterns = [ path('about/', views.about, name='aboutus'),]
 ```python
 {% include "topcourse.html" with p="PHP" only %}
 ```
+
+### Cookies:
+- A cookie is a small text data set by a web server and stored on the client's machine.
+- It is automatically sent back to the server with each request, allowing the server to store and access the information it wants to remember for the client.
+- Cookies enable personalized responses and enhance user experience on websites.
+
+#### Types of Cookies:
+- **Session Cookies:** Cookies that are set without the expires field are called session cookies. It is destroyed when the user quits the browser.
+- **Persistent Cookies:** The browser keeps it up until its expiration date is reached.
+
+<hr>
+
+# Model:
+- A model is the single, definitive source of information about your data.It contains the essential fields and behaviors of the data you're storing. Each model maps to a single database table.
+
+### Object Relational Mapper (ORM):
+- It enables application to interact with databases, ORMs automatically create a database schema from defined classes or models. It generates SQL from Python code for a particular database which means developer do not need to write SOL Code.
+  - ORM maps object attributes to respective table fields.
+  - ORMs use connectors to connect databases with a web application.
+- **QuerySet**
+  - A list containing all those objects we have created using the Django model. QuerySets allow you to read the data from the database, filter it and order it.
+
+## Model Class:
+- Model class is a class which will represent a table in database.
+  - Each model is a Python class that subclasses django.db.models.Model
+  - Each attribute of the model represents a database field.
+- Django gives you an automatically-generated database-access API. Django provides built-in database by default that is sqlite database.
+
+
+
+  
