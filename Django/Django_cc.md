@@ -943,9 +943,17 @@ Syntax:- python manage.py migrate
 python manage.py sqlmigrate application name dbfile _ name
 
 # Example:-
-python manage. py sqlmigrate enroll 0001
+python manage.py sqlmigrate enroll 0001
 ```
 
+<img width="1018" alt="migrations" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/36bf4410-7973-4d9a-8e53-f90380caa60b">
+
+- If we add a new field called comment in the original enroll file:
+
+<img width="851" alt="Migration-dependencies" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/d76532c0-7d29-4234-9a3c-e463b5ac01a3">
+
+- More information about [Built-in Field Types](https://github.com/IshaanAdarsh/TIL/blob/main/Django/Detailed%20Information/Built-in%20Field%20Options.md)
 - **showmigrations:** This lists a project's migrations and their status.
+
 
 
