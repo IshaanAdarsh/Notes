@@ -953,6 +953,9 @@ python manage.py sqlmigrate enroll 0001
 <img width="851" alt="Migration-dependencies" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/d76532c0-7d29-4234-9a3c-e463b5ac01a3">
 
 - More information about [Built-in Field Types](https://github.com/IshaanAdarsh/TIL/blob/main/Django/Detailed%20Information/Built-in%20Field%20Options.md)
+
+- More information about [Model Operations](https://github.com/IshaanAdarsh/TIL/blob/main/Django/Detailed%20Information/Model-Operations.md)
+
 - **showmigrations:** This lists a project's migrations and their status.
 
 
