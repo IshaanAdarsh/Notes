@@ -915,7 +915,7 @@ CREATE TABLE "enroll student" (
 - As we have not mentioned the primary key in any of these columns so it will automatically create a new column named 'id' Data Type Integer with primary key and auto increment.
 
 ### How to use Models:
-Once you have defined your models, you need to tell Django you're going to use those models.
+Once you have defined your models, you need to tell Django you will use those models.
 - Open settings.py file
 - Write app name which contains `models.py`, file in INSTALLED_APPS = []
 - Open Terminal and run python manage.py makemigrations
@@ -958,5 +958,6 @@ python manage.py sqlmigrate enroll 0001
 
 - **showmigrations:** This lists a project's migrations and their status.
 
-
-
+# Retrieve Database Table Data to User:
+- Writing Code to get data from database in views.py then pass it to template files using render function
+- Get Data which is passed by render function of views.py file in template file
