@@ -958,6 +958,56 @@ python manage.py sqlmigrate enroll 0001
 
 - **showmigrations:** This lists a project's migrations and their status.
 
-# Retrieve Database Table Data to User:
+### Retrieve Database Table Data to User:
 - Writing Code to get data from database in views.py then pass it to template files using render function
 - Get Data which is passed by render function of views.py file in template file
+
+#### all ()
+- `all ()`: It returns a copy of the current QuerySet or QuerySet Subclass.
+```python
+# Syntax:
+ModelClassName.obiects.all()
+```
+
+#### Steps: 
+- First import your own model class from models.py
+```python
+# views.py
+from enroll. models import Student def studentinfo(request):
+stud = Student.objects.allo
+return render(request, 'enroll/studetails.html', {'stu':stud})
+```
+
+- Get Data from views.py in template file
+```html
+templates/enroll/studetails.html
+<!DOCTYPE HTML>
+<html>
+  <body>
+    <h1>Student Page</h1>
+    {% if stu %}
+      <h1>Show Data</h1>
+      {% for st in stu %}
+          <h5> {{st.stuid}} </h5>
+          <h5> {{st.stuname}} </h5>
+      {% endfor %}
+    {% else %}
+      <h1>No Data</h1>
+    {% endif %}
+  </body>
+<html>
+```
+
+## Admin Application
+- It is a built-in application provided by Django.
+- This application provides admin interface for CRUD operations without writing sq| statements.
+- It reads metadata from your models to provide a quick, model-centric interface where trusted users can manage content on your site. Super User is required to login into Admin Application
+
+#### Create Super User
+- We need super user to login into admin interface of the admin application.
+- createsuperuser command is used to create super user.
+```python
+python manage.py createsuperuser
+```
+
+- Admin Application can be accessed using `http://127.0.0.1:8000/admin`
