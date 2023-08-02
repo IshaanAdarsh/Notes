@@ -1009,5 +1009,150 @@ templates/enroll/studetails.html
 ```python
 python manage.py createsuperuser
 ```
-
 - Admin Application can be accessed using `http://127.0.0.1:8000/admin`
+
+- But the problem with using makemigration is that the db will not show up in the Admin panel until we register the model.
+
+### How to Register Model:
+We are registering our table which we has created using model class, to default admin interface.
+To Register Follow:-
+- Open admin py file which is inside Application Folder
+- Import your own Model Class created inside Application's models.py
+  - `from enroll. models import Student`
+- admin.site.register(ModelClassName)
+  - `admin.site.register(Student)`
+
+### __str__() Method:
+The __str__() method is called whenever you call str on an object. To display an object in the Django admin site and as the value inserted into a template when it displays an object. (human-readable representation of the model)
+```python
+# Write this Method in your own model class which is inside models.py file.
+# Syntax:
+def __str__(self):
+  return self.fieldName
+
+def __str__(self):
+  return self.stuname
+```
+
+### ModelAdmin Class:
+- The ModelAdmin class is the representation of a model in the admin interface. (All the data so as to not justify each field using __str__ funtion)
+- To show table's all data in admin interface we have to create an ModelAdmin class in admin py file of Application folder.
+```python
+# Creating Class
+Class ModelAdminClass Name(admin. ModelAdmin):
+  class StudentAdmin(admin.ModelAdmin):
+
+# ModelAdmin Options
+list display=(fieldnamel', "fieldname2', .......)
+  list_display-('id', 'stuid', 'stuname")
+# Register Above Created Class
+admin.site.register(ModelClass Name, ModelAdminClassName)
+ admin.site.register(Student, StudentAdmin)
+```
+
+#### list_display
+- Set list_display to control which fields are displayed on the change list page of the admin. If you don't set list _display, the admin site will display a single column that displays the __str__() representation of each object
+- Must be a list or tuple, cannot contain only one value (use __str__ for that) or add it like ('fielname1',) [ADD a comma].
+
+- There are four types of values that can be used in list display:
+  - The name of a model field.
+  - A callable that accepts one argument, the model instance.
+  - A string representing a ModelAdmin method that accepts one argument, the model instance.
+  - A string representing a model attribute or method (without any required arguments).
+
+### Register Model by Decorator
+- A decorator can be used to register ModelAdmin Classes.
+- Syntax: `@admin.register(ModelClassNamel, ModelClassName2,.. ‚site=custom_admin_site)`
+
+#### Procedure:
+```python
+# Register Model Classes
+@admin.register(ModelClassName)
+  @admin. register(Student)
+# Creating Class
+Class ModelAdminClass Name(admin.ModelAdmin):
+list display ('fieldnamel', 'fieldname2', ......
+  class StudentAdmin(admin. ModelAdmin):
+  list_display -('id', 'stuid', 'stuname")
+```
+
+## Diango Form
+- Django's form functionality can simplify and automate vast portions of work like data prepared for display in a form, rendered as HTML, edit using a convenient interface, returned to the server, validated and cleaned up etc and can also do it more securely than most programmers would be able to do in code they wrote themselves.
+- Django handles three distinct parts of the work involved in forms:
+  - preparing and restructuring data to make it ready for rendering
+  - creating HTML forms for the data
+  - receiving and processing submitted forms and data from the client
+
+### Bound and Unbound Forms
+- If it's bound to a set of data, it's capable of validating that data and rendering the form as HTML with the data displayed in the HTML.
+- If it's unbound, it cannot do validation (because there's no data to validate!), but it can still render the blank form as HTML.
+
+### Create Diango Form using Form Class
+- To create Django form we have to create a new file inside application folder lets say file name is forms.py.
+- Now we can write below code inside forms.py to create a form:
+
+```python
+# forms.py
+# Syntax:
+from django import forms
+class FormClassName(forms.Form):
+  label=forms.FieldType0
+  label=forms.FieldType(label='display label')
+
+# Example:
+from django import forms
+class StudentRegistration(forms. Form):
+  name=forms.CharField()                        # Here length is not required
+  email=forms.EmailField()
+              |
+              |
+              |
+              ↓
+```
+```html
+<tr>
+  <th> <label for="id name">Name:</label> </th>
+  <td> <input type="text" name="name" required id="id name"> </td>
+</tr>
+<tr>
+  <th> <label for="id email">Email:</label> </th>
+  <td><input type="email" name="email" required id="id email"></td>
+<tr>
+```
+
+#### Display Form to User
+- Create an object of Form class in views.py then pass object to template files
+- Use Form object in template file
+
+#### Creating Form obiect in views.p
+- Create form object inside views.py file then pass this object to template file as a dict.
+```python
+# views.py
+from .forms import StudentRegistration
+def showformdata(request):
+  fm = StudentRegistration
+  return render(request, 'enroll/userregistration.html',{'form':fm})
+```
+> Form object won't provide form tag and button you have to write them manually in template file.
+
+#### Get object from views.py in template file:
+```html
+// templates/enroll/userregistration.html
+<!DOCTYPE html>
+<html>
+  <body>
+    // {{form}} doesn't add form tag and button so we have to add them manually.
+    <form action ="" method="get">
+      {{form}}
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
+```
+
+#### Form Rendering Options
+- {{form}} will render them all
+- {{ form.as table }} will render them as table cells wrapped in <tr> tags
+- {{ form.as_p}} will render them wrapped in <p> tags
+- {{ form.as ul}} will render them wrapped in <li> tags
+- {{ form.name of field }} will render field manually as given
