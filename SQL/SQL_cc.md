@@ -132,3 +132,77 @@ CREATE TABLE table_name (
 
 #### AUTO INCREMENT Field:
 - Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table. Not exactly a constraint but is passed into the table and this is normally used for a primary key.
+
+### UPDATE Statement:
+- The `UPDATE` statement is used to modify the existing records in a table.
+```sql
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+
+-- If we omit WHERE -> all the values are updated.
+```
+### DELETE Statement:
+- The `DELETE` statement is used to delete existing records in a table.
+```sql
+DELETE FROM table_name WHERE condition;
+-- If we Omit WHERE -> all values are deleted
+```
+
+## SQL SELECT Statement:
+- The `SELECT` statement is used to select data from a database. The data returned is stored in a result table, called the result-set.
+```sql
+-- Select certain columns from the table
+SELECT column1, column2, ...
+FROM table_name;
+
+-- Select the whole table
+SELECT * FROM table_name;
+```
+
+### ORDER BY Keyword:
+- The `ORDER BY` keyword is used to sort the result-set in ascending or descending order.
+- If we don't specify the order it needs to be returned in, it defualts to acending order.
+```sql
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC;
+
+-- Also we could be selective in ordering the table:
+-- In this, we first order according to columnx, if there is a clash then we order those objects according to columny
+SELECT *
+FROM table_name
+ORDER BY columnx, columny;
+```
+
+### LIMIT Keyword:
+- The `LIMIT` Keyword is used to show only a specified number of table entries
+```sql
+-- This only shows n nummber of Objects in the Table.
+SELECT *
+FROM table_name
+LIMIT n;
+```
+
+### WHERE Clause:
+- The `WHERE` clause is used to filter records. It is used to extract only those records that fulfil a specified condition.
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+-- Operators which can be used in the WHERE Statements
+=            Equal
+>            Greater than
+<            Less than
+>=           Greater than or equal
+<=           Less than or equal
+<>           Not equal
+
+BETWEEN      Between a certain range
+  WHERE column_name BETWEEN value1 AND value2;
+LIKE         Search for a pattern
+  WHERE column_name LIKE pattern;
+IN           To specify multiple possible values for a column
+  WHERE column_name IN (value1, value2, ...);
+```
