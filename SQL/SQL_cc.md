@@ -206,3 +206,60 @@ LIKE         Search for a pattern
 IN           To specify multiple possible values for a column
   WHERE column_name IN (value1, value2, ...);
 ```
+
+### AS clause:
+- The `AS` command is used to rename a column or table with an alias.
+```sql
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+```
+
+### SELECT DISTINCT Statement:
+- The `SELECT DISTINCT` statement is used to return only distinct (different) values.
+```sql
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+```
+
+### GROUP BY Statement:
+- The `GROUP BY` statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
+- The `GROUP BY` statement is often used with aggregate functions (`COUNT()`, `MAX()`, `MIN()`, `SUM()`, `AVG()`) to group the result-set by one or more columns.
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+```
+
+## [MySQL Functions](https://www.w3schools.com/sql/sql_ref_mysql.asp):
+- MySQL has many built-in functions which can be used to find the various values we need like SUM, AVG, etc.
+
+## Wildcards:
+
+### LIKE Operator:
+The `LIKE` operator is used in a `WHERE` clause to search for a specified pattern in a column.
+There are two wildcards often used in conjunction with the `LIKE` operator:
+- The percent sign (%) represents zero, one, or multiple characters
+- The underscore sign (_) represents one, single character
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column LIKE pattern;
+
+-- Using %
+-- In this example, we use this wildcard to specify that there can be nay number of characters before LLC but if this kind of pattern is present in the table client and in the column client_name then we will return it.
+SELECT *
+FROM client
+WHERE client_name LIKE '%LLC';
+
+-- Using _
+-- In this example, we use _ to specify one character space. In this example, the person with thier birthday in october is shown as a result
+SELECT *
+FROM employee
+WHERE birth_date LIKE '____-10%';
+```
+
+## Union:
+
