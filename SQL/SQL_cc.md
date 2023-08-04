@@ -38,7 +38,7 @@
 #### Surrogate Key:
 - An artificial key which aims to uniquely identify each record is called a surrogate key. These kind of key are unique because they are created when you don't have any natural primary key.
 
-### Structured Query Language (SQL):
+### Structured Query Language [(SQL)](https://www.w3schools.com/sql/default.asp):
 - SQL is actually a hybrid language, it's basically 4 types of languages in one
   -  **Data Query Language (DQL)**
     -  Used to query the database for information.
@@ -52,4 +52,83 @@
     - Used for inserting, updating and deleting data from the data
    
 ## Tables:
-- 
+### SQL CREATE TABLE Statement:
+- The `CREATE TABLE` statement is used to create a new table in a database.
+```sql
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+```
+- Creating a Table using another table.
+```sql
+CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+```
+### SQL DROP TABLE Statement:
+- The `DROP TABLE` statement is used to drop an existing table in a database.
+```sql
+DROP TABLE table_name;
+```
+- To delete Data inside table:
+  - The `TRUNCATE TABLE` statement is used to delete the data inside a table, but not the table itself.
+```sql
+TRUNCATE TABLE table_name;
+```
+
+### ALTER TABLE Statement
+- The `ALTER TABLE` statement is used to add, delete, or modify columns in an existing table. It can also be used to add and drop various constraints on an existing table.
+```sql
+-- Add Column
+ALTER TABLE table_name
+ADD column_name datatype;
+
+-- Drop Column
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+-- Rename Column
+ALTER TABLE table_name
+RENAME COLUMN old_name to new_name;
+
+-- Modify Datatype
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype;
+```
+
+### INSERT INTO Statement:
+- The `INSERT INTO` statement is used to insert new records in a table. Two ways to insert the data into the table:
+  - By specifying the column name and values to be inserted
+```sql
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+```
+  - If adding values to all columns dont need to specify column names, but oder the data according to the order of the columns present in the table.
+```sql
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+```
+### Constraints:
+- Constraints can be specified when the table is created with the `CREATE TABLE` statement, or after the table is created with the `ALTER TABLE` statement.
+```sql
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+);
+```
+#### NOT NULL Constraint:
+- The `NOT NULL` constraint enforces a column to NOT accept NULL values.
+#### UNIQUE Constraint:
+- The `UNIQUE` constraint ensures that all values in a column are different. Both the `UNIQUE` and `PRIMARY KEY` constraints provide a guarantee for uniqueness for a column or set of columns.
+- A `PRIMARY KEY` constraint automatically has a `UNIQUE` constraint. However, you can have many `UNIQUE` constraints per table, but only one `PRIMARY KEY` constraint per table.
+#### DEFAULT Constraint:
+- The `DEFAULT` constraint is used to set a default value for a column and will be passed as a value if no input is provided.
+
+#### AUTO INCREMENT Field:
+- Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table. Not exactly a constraint but is passed into the table and this is normally used for a primary key.
