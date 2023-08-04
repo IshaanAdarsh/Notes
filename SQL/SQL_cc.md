@@ -261,5 +261,53 @@ FROM employee
 WHERE birth_date LIKE '____-10%';
 ```
 
-## Union:
+## UNION Operator:
+The `UNION` operator is used to combine the result-set of two or more `SELECT` statements.
+- Every `SELECT` statement within `UNION` must have the same number of columns
+- The columns must also have similar data types
+- The columns in every `SELECT` statement must also be in the same order
+```sql
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+```
+
+## JOIN Clause:
+- A `JOIN` clause is used to combine rows from two or more tables, based on a related column between them.
+- table1 -> Left and table2 -> Right
+- Here are the different types of the JOINs in SQL:
+
+<img width="864" alt="Joins" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/ecb41b2b-1dd4-4826-b1bc-ac4b40294954">
+
+  - `(INNER) JOIN`: Returns records that have matching values in both tables
+```sql
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+```
+  - `LEFT (OUTER) JOIN`: Returns all records from the left table, and the matched records from the right table
+```sql
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+  - `RIGHT (OUTER) JOIN`: Returns all records from the right table, and the matched records from the left table
+```sql
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+  - `FULL (OUTER) JOIN`: Returns all records when there is a match in either left or right table
+```sql
+SELECT column_name(s)
+FROM table1
+FULL OUTER JOIN table2
+ON table1.column_name = table2.column_name
+WHERE condition;
+```
+
+## Nested Queries:
 
