@@ -310,4 +310,60 @@ WHERE condition;
 ```
 
 ## Nested Queries:
+- Nested queries are a way to perform more complex queries by embedding one query within another.
+- First the innermost statement is executed then the next one [IN -> OUT].
+### SQL IN Operator:
+- The `IN` operator allows you to specify multiple values in a WHERE clause. It is a shorthand for multiple `OR` conditions.
+```sql
+-- For executing multiple OR statements
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (value1, value2, ...);
 
+-- For executing nested Queries
+SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT STATEMENT);
+```
+## ON DELETE STATEMENT:
+- We use DELETE to remove a certain object or column in the table. But ON DELETE is a special attribute which tells the table what values need to be present if the key is deleted.
+
+1) `ON DELETE CASCADE` constraint is used in MySQL to delete the rows from the child table automatically when the rows from the parent table are deleted.
+2) `ON DELETE SET NULL` constraint deletes or updates the row from the parent table and set the foreign key column or columns in the child table to NULL.
+
+> Always use CASCADE if the primary key of a table is being affected as the key can't be null. 
+```sql
+-- If we remove a manager then the values corresponding to the manages will get set to null in SET NULL and DELETED if CASCADED 
+-- SET NULL
+CREATE TABLE branch (
+  branch_id INT PRIMARY KEY,
+  branch_name VARCHAR(40),
+  mgr_id INT,
+  mgr_start_date DATE,
+  FOREIGN KEY(mgr_id) REFERENCES employee(emp_id) ON DELETE SET NULL
+);
+
+--  CASCADE
+CREATE TABLE branch_supplier (
+  branch_id INT,
+  supplier_name VARCHAR(40),
+  supply_type VARCHAR(40),
+  PRIMARY KEY(branch_id, supplier_name),
+  FOREIGN KEY(branch_id) REFERENCES branch(branch_id) ON DELETE CASCADE
+);
+```
+
+## Trigger:
+- Triggers will be helpful when we need to execute some events automatically on certain desirable scenarios.
+```sql
+-- Create Trigger
+CREATE TRIGGER schema.trigger_name  
+ON table_name  
+AFTER  {INSERT, UPDATE, DELETE}  
+[NOT FOR REPLICATION]  
+AS  
+{SQL_Statements}
+
+-- Drop Trigger
+DROP TRIGGER [IF EXISTS] schema_name.trigger_name;  
+```
