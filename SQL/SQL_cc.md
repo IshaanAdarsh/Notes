@@ -367,3 +367,25 @@ AS
 -- Drop Trigger
 DROP TRIGGER [IF EXISTS] schema_name.trigger_name;  
 ```
+
+## Common Table Expression:
+- CTEs act as virtual tables (with records and columns) that are created during query execution, used by the query, and deleted after the query executes.
+```sql
+-- Syntax:
+[WITH  [, …]]  
+::=
+cte_name [(column_name [, …])]
+AS (cte_query) 
+
+-- Example
+-- We need to execute these queries together, or else the select won't work on its own
+WITH CTE Employee as
+(SELECT FirstName, LastName, Gender, Salary , COUNT (gender) OVER (PARTITION by Gender) as TotalGender , AVG (Salary) OVER (PARTITION BY Gender) as AvgSalary
+FROM SQLTutorial..EmployeeDemographics emp
+JOIN SQLTutorial..EmployeeSalary sal
+ON emp.EmployeeID = sal. EmployeeID
+WHERE Salary > '45000'
+)
+SELECT * FROM CTE_EMPLOYEE;
+
+```
