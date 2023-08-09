@@ -107,3 +107,49 @@ for (auto it = v.begin(); it != v.end(); it++) {
 cout << *(it) << " ";
 }
 ```
+
+## List:
+- A list in [STL](https://takeuforward.org/c/c-stl-tutorial-most-frequent-used-stl-containers/ "STL") is a contiguous container that allows the inserting and erasing of elements in constant time and iterating in both directions.
+
+```cpp
+// Syntax
+list<object_type> variable_name;
+```
+
+### Functions in List:
+
+```cpp
+// push_back(): To insert an element at the end of the list.
+list<int> li;
+li.push_back(110);
+li.push_back(220);
+
+// push_front(): To insert an element at the front of the list.
+list<int> li;
+li.push_front(110);
+li.push_front(220);
+
+// pop_back(): Deletes the last element of the list.
+li.pop_back();
+
+// pop_front(): Deletes the front element of the list.
+li.pop_front();
+
+// front(): It gives a reference to the first element of the list.
+li.front();
+
+// back(): It gives a reference to the last element of the list.
+li.back();
+
+// reverse(): Reverse the list.
+li.reverse();
+
+// sort(): Sorts the list in ascending order.
+li.sort();
+
+// size(): Returns the number of elements on the list.
+li.size();
+
+// empty(): To check if the list is empty or not.
+li.empty();
+```
