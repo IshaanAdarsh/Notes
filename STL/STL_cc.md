@@ -1,4 +1,4 @@
-# STL:
+# STL: 
 - STL provides a range of containers, such as vectors, lists, and maps, and algorithms for searching, sorting and manipulating data.
 
 ## Pair:
