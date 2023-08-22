@@ -1340,3 +1340,44 @@ class StudentRegistration (forms.Form) :
 # error_message
 name=forms.CharField(error messages={'required': 'Enter Your Name' })
 ```
+
+### GET method vs POST method:
+```html
+<form method = "get">
+</form>
+
+<form method = "post">
+</form>
+```
+#### GET Method:
+- GET should be used only for requests that do not affect the state of the system.
+- GET, by contrast, bundles the submitted data into a string, and uses this to compose a URL. The URL contains the address where the data must be sent, as well as the data keys and values.
+- GET would also be unsuitable for a password form, because the password would appear in the URL, and thus, also in browser history and server logs, all in plain text. Neither would it be suitable for large quantities of data, or for binary data, such as an image. A Web application that uses GET requests for admin forms is a security risk: it can be easy for an attacker to mimic a form's request to gain access to sensitive parts of the system.
+- GET is suitable for things like a web search form, because the URLs that represent a GET request can easily be bookmarked, shared, or resubmitted.
+
+#### POST Method:
+- Any request that could be used to change the state of the system should use POST.
+- POST, coupled with other protections like Django's CSRF protection offers more control over access.
+- Django's login form is returned using the POST method, in which the browser bundles up the form data, encodes it for transmission, sends it to the server, and then receives back its response.
+
+## Cross Site Request Forgery (CSRF/ XSRF):
+- A Cross-site request forgery hole is when a malicious site can cause a visitor's browser to make a request to your server that causes a change on the server. The server thinks that because the request comes with the user's cookies, the user wanted to submit that form.
+
+### Create form using POST method:
+- If we use GET then the information fed into the form is shown in the URL which causes security issues.
+- So we use POST method:
+  - We set the method to `post` and we include a CSRF token int the form to verify the form
+
+#### Cross Site Request Forgery (CSRF) Token:
+- Django provides CSRF Protection with csrf_token which we need to add inside form tag. This token will add a hidden input field with random value in form tag. 
+```html
+// templates/enroll/userregistration.html
+<!DOCTYPE html>
+<html>
+  <bodv>
+    <form method="post"> 
+      {% csrf_token %}
+    <input type="submit" value="Submit", </form>
+  </body>
+</html>
+```
