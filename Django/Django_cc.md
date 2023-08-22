@@ -1377,7 +1377,8 @@ name=forms.CharField(error messages={'required': 'Enter Your Name' })
   <bodv>
     <form method="post"> 
       {% csrf_token %}
-    <input type="submit" value="Submit", </form>
+      <input type="submit" value="Submit">
+    </form>
   </body>
 </html>
 ```
