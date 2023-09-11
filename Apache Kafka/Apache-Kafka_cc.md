@@ -98,4 +98,4 @@
 - Zero Down Time
   - It ensures zero downtime when required number of brokers are present in the cluster.
 - Reliability
-  - Kafka is reliable because it provides above features.
+  - Kafka is reliable because it provides above features. 
