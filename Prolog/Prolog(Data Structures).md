@@ -1,5 +1,6 @@
 # Prolog Language: Syntax and Semantics:
 ## Prolog Terms:
+
 ### Variable:
 - Starts with an uppercase letter or `_`
 - A single `_` denotes an anonymous variable
