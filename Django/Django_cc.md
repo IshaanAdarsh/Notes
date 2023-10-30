@@ -2,9 +2,9 @@
 - Django is a high-level Python web framework which is based on MVT architecture.
 
 ## MVT (Model View Template): 
-- The MVT is an design pattern that separates an application into three main logical componentsL
+- The MVT is an design pattern that separates an application into three main logical components
   - **Model:**
-    - The Model responsible to handle database. It is a data access layer which handles the data.
+    - The Model responsible for handling database. It is a data access layer which handles the data.
     - Written in Python (Need knowledge about Databases)
   - **View:**
     - The user can send request by interacting with template, the view handles these requests and sends to Model then get appropriate response from the Model, sends response to template. It works as a mediator between Template and Model.
