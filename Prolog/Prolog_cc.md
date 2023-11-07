@@ -1,4 +1,4 @@
-# [Prolog](https://www.metalevel.at/prolog):
+# [Prolog](https://www.metalevel.at/prolog): 
 Prolog is a **programming language** that is rooted in classical [**logic**](https://www.metalevel.at/prolog/logic). It supports *search* and *unification* as built-in features. Prolog allows us to elegantly solve many tasks with short and general programs.
 
 - A Prolog program consists of predicates.
