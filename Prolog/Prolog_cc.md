@@ -17,4 +17,4 @@ Head :- Body.
 - If `Head` *always* holds, then `:- Body` can be *omitted*.
 
 ### Prolog is a declarative language:
-- Prolog is a *declarative language*. This means that we focus on stating *what* we are interested in. We [express what *holds*](https://www.metalevel.at/prolog/writing) about solutions we want to find. We are less concerned about *how* the Prolog implementation finds these solutions.
+- Prolog is a *declarative language*. This means that we focus on stating *what* we are interested in. We [express what *holds*](https://www.metalevel.at/prolog/writing) about solutions we want to find. We are less concerned about *how* the Prolog implementation finds these solutions. 
