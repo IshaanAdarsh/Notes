@@ -3,7 +3,7 @@ Prolog is a **programming language** that is rooted in classical [**logic**](
 
 - A Prolog program consists of predicates.
   - Each Prolog predicate defines a relation between its arguments.
-    -  A relation is a generalization of a function.
+    -  A relation is a generalization of a function. 
 
 Prolog predicates are often more versatile than functions in other programming languages, and are typically usable in multiple directions.
 ## Facets of Prolog:
