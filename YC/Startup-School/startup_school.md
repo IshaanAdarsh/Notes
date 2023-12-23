@@ -135,4 +135,4 @@ Eg: Reginal food delivery beating Doordash, this is not because Doordash has a b
 _“Different idea spaces have wildly different hit rates”_
 - The aim is to find a good idea space which has a reasonable hit rate for new startup ideas and good founder market fit. By putting yourself in a good idea space, you put yourself in a good position to bump into a good startup idea.
 
-
+### Three things that make startup ideas seem bad, but actually make them good:
