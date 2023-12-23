@@ -133,6 +133,40 @@ Eg: Reginal food delivery beating Doordash, this is not because Doordash has a b
 - _Idea space:_ One level of abstraction out from a particular startup idea, it’s a class of closely related startup ideas.
 
 _“Different idea spaces have wildly different hit rates”_
-- The aim is to find a good idea space which has a reasonable hit rate for new startup ideas and good founder market fit. By putting yourself in a good idea space, you put yourself in a good position to bump into a good startup idea.
+- The aim is to find a good idea space with a reasonable hit rate for new startup ideas and good founder market fit. By putting yourself in a good idea space, you put yourself in a good position to bump into a good startup idea.
 
-### Three things that make startup ideas seem bad, but actually make them good:
+### Three things that make startup ideas seem bad, but make them good:
+**1) Hard to get started:**
+- [Schlep Blindness](http://www.paulgraham.com/schlep.html)
+- This often happens when many people can see the problem but due to the steep learning curve and hard starting point people don't attempt the idea.
+**2) Boring space:**
+  - A boring problem doesn't mean you don't attempt to solve said problem, due to this these software have a much higher hit rate.
+  - The day-to-day reality of a startup is the same for a boring or an interesting idea.
+**3) Existing competitors:**
+  - There is a real change that most people don't use the competitors products and there is a problem which is to be solved.
+
+## 7 Recipes for Generating Startup Ideas
+### How to come up with Startup ideas originally(long game):
+- Become an expert on something valuable
+- Work at a startup
+- Build things you find interesting
+
+### 1) Start with what your team is really good at and think of ideas which take advantage of your expertise
+- These have automatic founder/market fit.
+
+### 2) Start with a problem you have personally encountered
+- Ideally one problem which you are in an unusual position to see.
+
+#### Using Recipes One and Two
+- Think of every job you've had (+ internships + life experiences).
+- What are problems or opportunities you've been in a special position to see?
+
+### 3) Think of things you personally wish existed:
+- Most dangerous and could lead to tarpit ideas.
+- To avoid this research and see why this thing doesn't exist yet.
+### 4) Look for things in the world that have changed recently and created a new opportunity
+### 5) Look for new variants of successful companies
+### 6) Talk to people and ask what problems they have:
+- To do this pick a fertile idea space and talk to people(founders and potential customers) in this idea space
+### 7) Look for big industries that seem broken
+### 8) Find a co-founder that has an idea
