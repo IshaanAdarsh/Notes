@@ -43,3 +43,91 @@ If you start a startup, it will take over your life to a degree you cannot imagi
 
 ### Try:
 If you're absolutely terrified of starting a startup, you probably shouldn't do it. But if you're merely unsure whether you're up to it, the only way to find out is to try. Just not now.
+
+### Ideas:
+There are only two things you need initially: an idea and cofounders. And the m.o. for getting both is the same. Which leads to our sixth and last counterintuitive point: that the way to get startup ideas is not to try to [think of startup ideas](http://www.paulgraham.com/startupideas.html).
+
+If you make a conscious effort to think of startup ideas, the ideas you come up with will not merely be bad, but bad and plausible-sounding, meaning you'll waste a lot of time on them before realizing they're bad.
+
+The way to come up with good startup ideas is to take a step back. Instead of making a conscious effort to think of startup ideas, turn your mind into the type that startup ideas form in without any conscious effort. In fact, so unconsciously that you don't even realize at first that they're startup ideas.
+
+_“ The best startups almost have to start as side projects, because great ideas tend to be such outliers that your conscious mind would reject them as ideas for companies.”_
+
+#### How do you turn your mind into the type that startup ideas form in unconsciously? 
+
+**(1) Learn a lot about things that matter**
+- [Power of Marginal](http://www.paulgraham.com/marginal.html)
+
+**(2) Work on problems that interest you**
+_"The component of entrepreneurship that really matters is domain expertise."_
+
+**(3) With people you like and respect:**
+_"At its best, starting a startup is merely an ulterior motive for curiosity. And you'll do it best if you introduce the ulterior motive toward the end of the process."_
+
+So here is the ultimate advice for young would-be startup founders, boiled down to two words: just learn.
+
+## [How to get and evaluate startup ideas:](https://www.startupschool.org/curriculum/how-to-get-and-evaluate-startup-ideas):
+### Most Common mistake with startup ideas:
+#### Not solving a real problem:
+- When you can articulate the problems but when talking to users they don’t care about the issue that it solves. Problem with this approach is you find a superficially plausible/ made up problem that people don’t care about. 
+
+_“SISP: Solution in search for a problem”_
+
+- Instead -> Fall in love with a problem.
+- Start with a high quality problem (not abstract like Global poverty) which is specific.
+
+#### Getting Stuck on a ‘Tarpit’ Idea:
+- **Tarpit Idea:** Set of common startup idea that have been around for forever, when founders start working on these they don’t go anywhere like they are stick in tar.
+
+- Cause of tarpit ideas:
+    - Widespread problem that lots of potential founders encounter
+    - Seems like it could be easily solvable with a startup
+    - There's a structural reason why it's actually very difficult to solve
+
+They are common ideas which are much harder than they seem.
+
+- How to go about this:
+  - Google it, see if this problem has being tried to be solved in the past. Find people and talk to them to understand the issues or th roadblocks they encountered
+
+#### Not evaluating an Idea:
+- Founders jump on the first idea they think will work, without studying the problem or if their product/service will make a good business.
+
+#### Wait for the perfect idea:
+- It’s the complete opposite, they wait all the time and never start anything. The correct startup idea has all the right qualities to morph into a great idea over time.
+
+_“You should think of your initial idea as a good starting point. Startup ideas morph over time”_
+
+### 10 Key Questions To Ask About A Startup Idea:
+**1)	Do you have founder/market fit:**
+- Are you the right team to be working on this idea, so if you are making a construction helper site, the cofounder should have some expertise about construction and webdev.
+- It’s a good practice to pick a good idea for your team, so the startup idea you pitch will be something your team would be good at executing.
+**2)	How big is the market:**
+Two kinds of markets you should aim for:
+-	Ones that are big now
+-	Ones that are small but rapidly growing
+
+**3)	How acute is this problem:**
+Working on something that isn’t really a problem or something people don’t care about. 
+The opposite to this is an idea which has no rivals or alternatives, like BREX it gives credit cards to startups (it had no competitiors and was the only company providing this service).
+
+**4)	Do you have competition:**
+- Most good startup ideas have competition, it sound wrong but it’s the truth. 
+- The counter to this is if you are going against an entrenched competition you would typically need a new insight.
+**5)	Do you want this or know people who want this:**
+**6)	Did this only recently become possible or necessary:**
+- Something has been recently changed like a new technology or a regulatory change or a new problem, this creates a new opportunity.
+**7)	Are there good proxies for this business?**
+- Proxy is a large company which does something similar to your startup, but it’s not a direct competitor. Its shows that the idea works and has not been implemented properly or has some issues.
+
+Eg: Reginal food delivery beating Doordash, this is not because Doordash has a bad product it’s just that it didn’t capture the market in that particular area.
+
+**8)	Is this an idea you’d like to work on for years?**
+**9)	Is this a scalable business?**
+- If your building software there is no issue as software scales infinitely but for services it’s a very important question (any business which requires high skill human labour to serve customers).
+**10) Is this a good idea space?**
+- _Idea space:_ One level of abstraction out from a particular startup idea, it’s a class of closely related startup ideas.
+
+_“Different idea spaces have wildly different hit rates”_
+- The aim is to find a good idea space which has a reasonable hit rate for new startup ideas and good founder market fit. By putting yourself in a good idea space, you put yourself in a good position to bump into a good startup idea.
+
+
