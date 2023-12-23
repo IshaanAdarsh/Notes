@@ -113,17 +113,22 @@ The opposite to this is an idea which has no rivals or alternatives, like BREX i
 **4)	Do you have competition:**
 - Most good startup ideas have competition, it sound wrong but it’s the truth. 
 - The counter to this is if you are going against an entrenched competition you would typically need a new insight.
+
 **5)	Do you want this or know people who want this:**
+
 **6)	Did this only recently become possible or necessary:**
 - Something has been recently changed like a new technology or a regulatory change or a new problem, this creates a new opportunity.
+
 **7)	Are there good proxies for this business?**
 - Proxy is a large company which does something similar to your startup, but it’s not a direct competitor. Its shows that the idea works and has not been implemented properly or has some issues.
 
 Eg: Reginal food delivery beating Doordash, this is not because Doordash has a bad product it’s just that it didn’t capture the market in that particular area.
 
 **8)	Is this an idea you’d like to work on for years?**
+
 **9)	Is this a scalable business?**
 - If your building software there is no issue as software scales infinitely but for services it’s a very important question (any business which requires high skill human labour to serve customers).
+
 **10) Is this a good idea space?**
 - _Idea space:_ One level of abstraction out from a particular startup idea, it’s a class of closely related startup ideas.
 
