@@ -146,3 +146,7 @@ STATUS	Up 4 minutes
 ```
 
 ### Docker Volumes:
+- Allows sharing of data (Files & Folders) between
+    - host and containers
+    - Multiple Containers 
+<img width="679" alt="Screenshot 2023-12-24 at 12 09 45 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/ab8da3de-a334-423f-9a08-70ae17a99baa">
