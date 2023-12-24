@@ -175,7 +175,8 @@ _“Different idea spaces have wildly different hit rates”_
 ## [How to Get Startup Ideas](https://paulgraham.com/startupideas.html)
 ## [Pivoting Out of a Tarpit Idea](https://www.startupschool.org/curriculum/pivoting-out-of-a-tarpit-idea)
 ### Tarpit idea:
-Ideas that look innovative but are hard to execute. It's like a bucket of water in a desert, the people who find it generally discount the number of dead bodies near the bucket and go for the poison water.
+- Ideas that look innovative but are hard to execute. It's like a bucket of water in a desert, the people who find it generally discount the number of dead bodies near the bucket and go for the poisoned water.
+- You will be defensive about this idea when you are presented with proof that this idea is challenging.
 
 #### Consumer Ideas:
 - Most tarpit ideas are consumer ideas, not aimed at companies
@@ -185,4 +186,7 @@ Ideas that look innovative but are hard to execute. It's like a bucket of water 
 - The bar is high (they discount the failures)
 - Timing is very important
 
-
+#### Supply and Demand:
+- Best way to see the startup ecosystem is to look for ideas which have
+    - *A low supply of founders:* Founders with expertise in a particular field not like social media apps which everyone wants to make
+    - *High demand in niche markets:* Like a mining software which guides the machinery where and what to send to maximize profit.
