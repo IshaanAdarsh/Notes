@@ -211,3 +211,23 @@ _“Different idea spaces have wildly different hit rates”_
 | • You read an article about some hot new trend that is popular with investors and want to chase it | • I'm not a good fit to be working on this idea              |
 |                                                           | • I am relying on an external factor outside of my control to make my startup take off |
 |                                                           | • I'm out of ideas on what to do differently to make it start working |
+
+### Why people take too long to pivot:
+#### Loss aversion:
+- When you put a lot of time into something, you have a hard time letting go of it
+
+#### Have a little bit of traction:
+- Have a few users, but not hitting something new. (maybe it will work)
+
+#### People are polite and have a hard time telling you they don't want what you are making in a direct way
+#### Fear of admitting weakness/defeat (watch out for this you asshole)
+#### Putting blame re:why things aren't working on customers/investors (I'm not wrong the world is wrong)
+#### Inspiration Porn:
+- Belief given to you by inspirational sources that *"if you just believe hard enough things are going to change"*
+
+### Product Market Fit:
+- Most people never get it
+- **You know you have it when growth is not your biggest problem - keeping up with demand is**
+- If you don't have PMF and you have given an idea your best then it can be easier to get PMF by changing ideas than continuing to throw good time/money after bad look at it like *"shots on goal"* by pivoting you het  more shots and probably will score.
+
+### Finding a Better idea:
