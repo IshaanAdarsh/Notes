@@ -170,3 +170,19 @@ _“Different idea spaces have wildly different hit rates”_
 - To do this pick a fertile idea space and talk to people(founders and potential customers) in this idea space
 ### 7) Look for big industries that seem broken
 ### 8) Find a co-founder that has an idea
+
+
+## [How to Get Startup Ideas](https://paulgraham.com/startupideas.html)
+## [Pivoting Out of a Tarpit Idea](https://www.startupschool.org/curriculum/pivoting-out-of-a-tarpit-idea)
+### Tarpit idea:
+Ideas that look innovative but are hard to execute. It's like a bucket of water in a desert, the people who find it generally discount the number of dead bodies near the bucket and go for the poison water.
+
+#### Consumer Ideas:
+- Most tarpit ideas are consumer ideas, not aimed at companies
+- This is because we have been marketed ideas all our life, so when we think of ideas we generally get consumer-centric ideas.(like facebook and google)
+
+**Challenges to implement consumer products:**
+- The bar is high (they discount the failures)
+- Timing is very important
+
+
