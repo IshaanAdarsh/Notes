@@ -171,7 +171,6 @@ _“Different idea spaces have wildly different hit rates”_
 ### 7) Look for big industries that seem broken
 ### 8) Find a co-founder that has an idea
 
-
 ## [How to Get Startup Ideas](https://paulgraham.com/startupideas.html)
 ## [Pivoting Out of a Tarpit Idea](https://www.startupschool.org/curriculum/pivoting-out-of-a-tarpit-idea)
 ### Tarpit idea:
@@ -189,4 +188,26 @@ _“Different idea spaces have wildly different hit rates”_
 #### Supply and Demand:
 - Best way to see the startup ecosystem is to look for ideas which have
     - *A low supply of founders:* Founders with expertise in a particular field not like social media apps which everyone wants to make
-    - *High demand in niche markets:* Like a mining software which guides the machinery where and what to send to maximize profit.
+    - *High demand in niche markets:* Like mining software which guides the machinery where and what to send to maximize profit.
+
+## All About Pivoting:
+### What is pivot:
+- If you are very very early stage it's not even exactly "pivoting" - it is just idea iteration - "pivoting" usually implies changing a product that is fully live and has customers (for example, Slack)
+- Pivoting is not a big bang moment - it's just a thing you do when you iterate on ideas - it's a lightweight thing
+- A company that is not quickly ideating and rapidly learning and changing assumptions, in the beginning, is probably not moving fast enough
+
+### Why you should pivot:
+#### Opportunity cost: 
+*"the loss of potential gain from other alternatives when one alternative is chosen."*
+- If you are working on something that isn't working and you have evidence that its not working you are taking oppertunity cost by not working on something else.
+
+<img width="654" alt="Screenshot 2023-12-24 at 6 46 17 PM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/331ed8b3-98ee-49b3-ba59-1cec9f1e20b2">
+
+### Reasons to Pivot
+| Good Reasons Not to Pivot                                  | Good Reasons to Pivot                                           |
+|-----------------------------------------------------------|----------------------------------------------------------------|
+| • You are trying to run away from doing hard work           | • I hate working on it                                         |
+| • You are repeatedly changing ideas and giving up on them before launching and doing sales | • It's not growing                                           |
+| • You read an article about some hot new trend that is popular with investors and want to chase it | • I'm not a good fit to be working on this idea              |
+|                                                           | • I am relying on an external factor outside of my control to make my startup take off |
+|                                                           | • I'm out of ideas on what to do differently to make it start working |
