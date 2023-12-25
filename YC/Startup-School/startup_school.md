@@ -274,3 +274,18 @@ _"Founders that are incapable of changing ideas struggle, founders that change i
 | Ease of Implementation       |    1-10     | Ease of getting started on the idea.                 |
 | Customer Feedback           |    1-10     | Early market feedback from customers.               |
 | Overall Idea Score          |    1-10     | Comprehensive score reflecting overall idea quality.|
+
+- Bad founder market fit:
+<img width="384" alt="Screenshot 2023-12-25 at 11 37 43 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/66c560fd-52c3-4ee7-b728-a00bc0dff454">
+
+<img width="372" alt="Screenshot 2023-12-25 at 11 37 53 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/b15a8698-90f6-4fe0-8ecb-ae046696ed6d">
+
+- Enough Traction(tarpit):
+<img width="413" alt="Screenshot 2023-12-25 at 11 32 47 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/74dd68e5-315a-408b-b7ef-ee27531e044e">
+
+<img width="416" alt="Screenshot 2023-12-25 at 11 33 59 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/b8802768-e0b1-4469-b291-835b036f71da">
+
+- Small Scale idea, polite(tarpit):
+<img width="395" alt="Screenshot 2023-12-25 at 11 34 37 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/92dc24f1-e641-4dcb-a17b-a0c2ea8b0664">
+
+<img width="393" alt="Screenshot 2023-12-25 at 11 35 26 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/35601a79-7474-4c99-a4b2-103eebca8fff">
