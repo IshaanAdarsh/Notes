@@ -253,3 +253,24 @@ _"If the way you evaluate the quality of an idea is from investors you are going
   -  A large % of stuff on Shark Tank is not a venture-backable business
 
 **If yes then go for VC funding**
+
+### When is the best time to pivot:
+As soon as possible when these things happen:
+- You have launched and have been trying to get users for weeks or months and it feels hopeless
+- When the idea is impossible to get started on b/c it takes years of building/too much capital etc
+- You know in your heart its not going to work
+- Having employees while pivoting is extra hard and not recommended - best to do it with just founders
+
+#### Whiplash:
+- Pivoting over and over and over again can cause whiplash
+  - Whiplash makes founders give up -> kills the company
+
+_"Founders that are incapable of changing ideas struggle, founders that change ideas too much struggle. Find the happy medium"_
+
+| Criteria                   | Score Range | Description                                          |
+|----------------------------|-------------|------------------------------------------------------|
+| Magnitude of Impact         |    1-10     | How big of an idea it seems to be.                    |
+| Founder/Market Fit          |    1-10     | Alignment of founders with the target market.         |
+| Ease of Implementation       |    1-10     | Ease of getting started on the idea.                 |
+| Customer Feedback           |    1-10     | Early market feedback from customers.               |
+| Overall Idea Score          |    1-10     | Comprehensive score reflecting overall idea quality.|
