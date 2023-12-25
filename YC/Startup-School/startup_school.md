@@ -231,3 +231,25 @@ _“Different idea spaces have wildly different hit rates”_
 - If you don't have PMF and you have given an idea your best then it can be easier to get PMF by changing ideas than continuing to throw good time/money after bad look at it like *"shots on goal"* by pivoting you het  more shots and probably will score.
 
 ### Finding a Better idea:
+- Try to find something the founders are more excited about and makes them feel more optimistic to work on it
+  - Corollary: being more ambitious is often counter-intuitively easier (going after harder ideas is good)
+- Honest assessment of founders strengths/weaknesses and attempt to find something with better founder market-fit (Self awareness)
+- Best to find something easy to get started and validate market feedback (for a pivot)
+
+#### It's OK to not work an idea that requires venture capital:
+- Most companies in the world that people start don't require VC. That is good.
+- Trying to raise money for a company where VC doesn't make sense is not a great use of anyones time (if the idea is VC fundable)
+
+_"If the way you evaluate the quality of an idea is from investors you are going to get pushed down the VC rabbit hole"_
+
+### Venture vs non-venture scale ideas
+- There is no guidebook I am aware of for what "venture scale means"
+- Some suggestions I have:
+  - Can I imagine this business possibly generating 100s of millions or billions in net revenue per year?
+  - Can I imagine the revenue growth to get to that scale taking less than ten years?
+  - Can I imagine this as a publicly traded company?
+  - Technology is a key component, and the technology is built by the founders rather than outsourced
+  -  Extremely high "software" margins (80% gross margin)
+  -  A large % of stuff on Shark Tank is not a venture-backable business
+
+**If yes then go for VC funding**
