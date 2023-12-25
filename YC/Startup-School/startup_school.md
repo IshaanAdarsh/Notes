@@ -289,3 +289,5 @@ _"Founders that are incapable of changing ideas struggle, founders that change i
 <img width="395" alt="Screenshot 2023-12-25 at 11 34 37 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/92dc24f1-e641-4dcb-a17b-a0c2ea8b0664">
 
 <img width="393" alt="Screenshot 2023-12-25 at 11 35 26 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/35601a79-7474-4c99-a4b2-103eebca8fff">
+
+### Where Do Great Startup Ideas Come From?
