@@ -291,3 +291,14 @@ _"Founders that are incapable of changing ideas struggle, founders that change i
 <img width="393" alt="Screenshot 2023-12-25 at 11 35 26 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/35601a79-7474-4c99-a4b2-103eebca8fff">
 
 ### Where Do Great Startup Ideas Come From?
+There are 3 common themes:
+- **Timing**
+  - Preexisting Product
+  - Preexisting Competitor
+  - 10x Better Product Possible
+ 
+- **Idea**
+  - Most founders and investors thought these ideas were horrible
+ 
+- **Market**
+  - Each opportunity turned out to be bigger than what the founders expected
