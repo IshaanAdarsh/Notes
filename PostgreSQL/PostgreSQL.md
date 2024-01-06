@@ -1,10 +1,7 @@
 # [PostgreSQL](https://training.enterprisedb.com/learn/lp/19/open-source-postgresql-learning-plan-v16)
 
-## Content Index:
-### 1) [System Architecture](https://github.com/IshaanAdarsh/TIL/blob/main/PostgreSQL/PostgreSQL.md#system-architecture-1)
-
-
-
+### Content Index:
+- [System Architecture](#system-architecture)
 
 ## 1) System Architecture:
 <img width="941" alt="Screenshot 2024-01-06 at 11 32 52 AM" src="https://github.com/IshaanAdarsh/TIL/assets/100434702/830c0ed2-5616-4cb7-9961-2c909d68fccf">
