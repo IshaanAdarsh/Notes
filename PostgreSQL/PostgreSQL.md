@@ -1,7 +1,7 @@
 # [PostgreSQL](https://training.enterprisedb.com/learn/lp/19/open-source-postgresql-learning-plan-v16)
 
 ## Index:
-### [System Architecture](https://github.com/IshaanAdarsh/TIL/edit/main/PostgreSQL/PostgreSQL.md#system-architecture-1)
+### [System Architecture](https://github.com/IshaanAdarsh/TIL/main/PostgreSQL/PostgreSQL.md#system-architecture-1)
 
 
 
