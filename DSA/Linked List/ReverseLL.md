@@ -1,7 +1,7 @@
 # Reverse Linked List:
 ## Appraoch 1 (Iterative Method):
 
--   Initialize three pointers **prev** as NULL, **curr** as **head**, and **next** as NULL.
+-   Initialize three pointers **prev** as NULL, **curr** as **head**, and **next** as NULL. 
 -   Iterate through the linked list. In a loop, do the following:
     -   Before changing the **next** of **curr**, store the **next** node 
         -   next = curr -> next
