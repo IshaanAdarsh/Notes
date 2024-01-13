@@ -34,6 +34,12 @@ int searchInsert(vector<int>& nums, int target) {
     }
 ```
 
+- **Easy to understand:**
+  - If the target is found well and good then we return said index.
+  - But if the target is not found, the place where the low and high pointers switch over is the index to be returned.
+    - We need to understand what binary search does, it closes in on the target varibale, but if the target varibale is not present it switches at its nearest value.
+      - The low indicates the value just greater to it
+      - The high indicates the value smaller to it
 ```cpp
 int searchInsert(vector<int>& nums, int target) {
 // Invariant: the desired index is between [low, high+1]
