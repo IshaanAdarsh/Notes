@@ -24,8 +24,53 @@ int binarySearch(vector<int>& nums, int target) {
     return -1;
 }
 ```
+### lower_bound:
+- The lower bound is the smallest index, ind, where arr[ind] >= x. But if any such index is not found, the lower bound algorithm returns n i.e. size of the given array.
+```cpp
+int lowerBound(vector<int> arr, int n, int x) {
+    int low = 0, high = n - 1;
+    int ans = n;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        // maybe an answer
+        if (arr[mid] >= x) {
+            ans = mid;
+            //look for smaller index on the left
+            high = mid - 1;
+        }
+        else {
+            low = mid + 1; // look on the right
+        }
+    }
+    return ans;
+}
+```
+
+### upper_bound:
+- The upper bound is the smallest index, ind, where arr[ind] > x.
+```cpp
+int upperBound(vector<int> &arr, int x, int n) {
+    int low = 0, high = n - 1;
+    int ans = n;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        // maybe an answer
+        if (arr[mid] > x) {
+            ans = mid;
+            //look for smaller index on the left
+            high = mid - 1;
+        }
+        else {
+            low = mid + 1; // look on the right
+        }
+    }
+    return ans;
+}
+```
 ### [Binary Search that handles duplicate:](https://leetcode.com/problems/search-insert-position/solutions/15101/c-o-logn-binary-search-that-handles-duplicate/)
-- Can use lower boundfunction too:
+- Can use lower bound function too:
 ```cpp
 \\ The lower_bound() is used to return an iterator pointing to the first element in the range [first, last) which has a value >= target.
 
@@ -37,9 +82,9 @@ int searchInsert(vector<int>& nums, int target) {
 - **Easy to understand:**
   - If the target is found well and good then we return said index.
   - But if the target is not found, the place where the low and high pointers switch over is the index to be returned.
-    - We need to understand what binary search does, it closes in on the target varibale, but if the target varibale is not present it switches at its nearest value.
-      - The low indicates the value just greater to it
-      - The high indicates the value smaller to it
+    - We need to understand what binary search does, it closes in on the target variable, but if the target variable is not present it switches at its nearest value.
+      - The low indicates the value is just greater than it
+      - The high indicates the value is smaller than it
 ```cpp
 int searchInsert(vector<int>& nums, int target) {
 // Invariant: the desired index is between [low, high+1]
@@ -51,7 +96,7 @@ int searchInsert(vector<int>& nums, int target) {
   }
 
         // (1) At this point, low > high. That is, low >= high+1
-        // (2) From the invariant, we know that the index is between [low, high+1], so low <= high+1. Follwing from (1), now we know low == high+1.
+        // (2) From the invariant, we know that the index is between [low, high+1], so low <= high+1. Following from (1), now we know low == high+1.
         // (3) Following from (2), the index is between [low, high+1] = [low, low], which means that low is the desired index
         //     Therefore, we return low as the answer. You can also return high+1 as the result, since low == high+1
         return low;
@@ -59,4 +104,5 @@ int searchInsert(vector<int>& nums, int target) {
 };
 ```
 
-# L
+# First and Last Position:
+
