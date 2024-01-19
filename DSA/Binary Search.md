@@ -105,4 +105,4 @@ int searchInsert(vector<int>& nums, int target) {
 ```
 
 # First and Last Position:
-
+How its made
