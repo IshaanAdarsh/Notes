@@ -80,6 +80,31 @@ int upperBound(vector<int> &arr, int x, int n) {
 upper_bound(nums.begin(), nums.end(), target) - nums.begin();
 ```
 
+### Ceil and Floor using BS:
+- **Ceil: Smallest number in array >= target** -> lower_bound of the array
+- **Floor: Larget number in array <= target**
+
+```cpp
+int findFloor(int arr[], int n, int x) {
+	int low = 0, high = n - 1;
+	int ans = -1;
+
+	while (low <= high) {
+		int mid = (low + high) / 2;
+		// maybe an answer
+		if (arr[mid] <= x) {
+			ans = arr[mid];
+			//look for smaller index on the left
+			low = mid + 1;
+		}
+		else {
+			high = mid - 1; // look on the right
+		}
+	}
+	return ans;
+}
+```
+
 ### [Binary Search that handles duplicate:](https://leetcode.com/problems/search-insert-position/solutions/15101/c-o-logn-binary-search-that-handles-duplicate/)
 - Can use lower bound function too:
 ```cpp
