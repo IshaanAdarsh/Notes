@@ -204,3 +204,39 @@ int firstPos(vector<int>& nums, int target){
         return {f,l};
     }
 ```
+
+### Search in Sorted Array:
+#### Unique Elements:
+```cpp
+int search(vector<int>& arr, int n, int k) {
+    int low = 0, high = n - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (arr[mid] == k) return mid;
+
+        //left half sorted:
+        if (arr[low] <= arr[mid]) {
+            if (arr[low] <= k && k <= arr[mid]) {
+                //element exists:
+                high = mid - 1;
+            }
+            else {
+                //element does not exist:
+                low = mid + 1;
+            }
+        }
+	//right half sorted:
+        else { 
+            if (arr[mid] <= k && k <= arr[high]) {
+                //element exists:
+                low = mid + 1;
+            }
+            else {
+                //element does not exist:
+                high = mid - 1;
+            }
+        }
+    }
+    return -1;
+}
+```
