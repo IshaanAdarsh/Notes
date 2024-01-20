@@ -105,7 +105,7 @@ int findFloor(int arr[], int n, int x) {
 }
 ```
 
-### [Binary Search that handles duplicate:](https://leetcode.com/problems/search-insert-position/solutions/15101/c-o-logn-binary-search-that-handles-duplicate/)
+### [Search Insert Position:](https://leetcode.com/problems/search-insert-position/solutions/15101/c-o-logn-binary-search-that-handles-duplicate/)
 - Can use lower bound function too:
 ```cpp
 \\ The lower_bound() is used to return an iterator pointing to the first element in the range [first, last) which has a value >= target.
@@ -140,5 +140,21 @@ int searchInsert(vector<int>& nums, int target) {
 };
 ```
 
-# First and Last Position:
-How its made
+### First and Last Position:
+- In a normal case we need to return [lower_bound, upper_bound-1], but this fails in the case:
+  - If the number is not present -> [upper bound - 1] will not point to the number
+  - If the number is greater than the greatest number and upper_bound == n -> not a real location to check its value.
+
+#### Using lb and ub:
+- Time Complexity: 2*O(log n)
+- Space Complexity: O(1)
+```cpp
+pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k) {
+    int lb = lowerBound(arr, n, k);
+    if (lb == n || arr[lb] != k) return { -1, -1};
+    int ub = upperBound(arr, n, k);
+    return {lb, ub - 1};
+}
+```
+
+#### Binary Search:
