@@ -25,7 +25,8 @@ int binarySearch(vector<int>& nums, int target) {
 }
 ```
 ### lower_bound:
-- The lower bound is the smallest index, ind, where arr[ind] >= x. But if any such index is not found, the lower bound algorithm returns n i.e. size of the given array.
+- The lower bound is -> smallest index (ind) , where arr[ind] >= x.
+- But if any such index is not found, the lower bound algorithm returns n i.e. size of the given array.
 ```cpp
 int lowerBound(vector<int> arr, int n, int x) {
     int low = 0, high = n - 1;
@@ -47,8 +48,13 @@ int lowerBound(vector<int> arr, int n, int x) {
 }
 ```
 
+#### STL:
+```
+lower_bound(nums.begin(), nums.end(), target) - nums.begin();
+```
+
 ### upper_bound:
-- The upper bound is the smallest index, ind, where arr[ind] > x.
+- The upper bound -> smallest index (ind) , where arr[ind] > x.
 ```cpp
 int upperBound(vector<int> &arr, int x, int n) {
     int low = 0, high = n - 1;
@@ -69,6 +75,11 @@ int upperBound(vector<int> &arr, int x, int n) {
     return ans;
 }
 ```
+#### STL:
+```
+upper_bound(nums.begin(), nums.end(), target) - nums.begin();
+```
+
 ### [Binary Search that handles duplicate:](https://leetcode.com/problems/search-insert-position/solutions/15101/c-o-logn-binary-search-that-handles-duplicate/)
 - Can use lower bound function too:
 ```cpp
