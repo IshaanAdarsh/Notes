@@ -207,6 +207,12 @@ int firstPos(vector<int>& nums, int target){
 
 ### Search in Sorted Array:
 #### Unique Elements:
+To efficiently search for a target value using this observation, we will follow a simple two-step process. 
+- First, we identify the sorted half of the array. 
+- Once found, we determine if the target is located within this sorted half.
+  - If not, we eliminate that half from further consideration.
+  - Conversely, if the target does exist in the sorted half, we eliminate the other half.
+
 ```cpp
 int search(vector<int>& arr, int n, int k) {
     int low = 0, high = n - 1;
