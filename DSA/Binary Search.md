@@ -246,3 +246,22 @@ int search(vector<int>& arr, int n, int k) {
     return -1;
 }
 ```
+
+#### Duplicate Elements:
+- **edge case: If arr[low] = arr[mid] = arr[high] then the answer will be wrong**
+```cpp
+// Just add this edge case in the previous solution
+
+        //if mid points the target
+        if (arr[mid] == k) return true;
+
+        //Edge case:
+        if (arr[low] == arr[mid] && arr[mid] == arr[high]) {
+            low = low + 1;
+            high = high - 1;
+            continue;
+        }
+
+        //if left part is sorted:
+```
+
