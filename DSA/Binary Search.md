@@ -265,4 +265,86 @@ int search(vector<int>& arr, int n, int k) {
         //if left part is sorted:
 ```
 
-### L
+### Minimum in Rotated Sorted Array:
+If an array is rotated and sorted, we already know that for every index, one of the 2 halves of the array will always be sorted. Based on this observation, we adopted a straightforward two-step process to eliminate one-half of the rotated sorted array. 
+- First, we identify the sorted half of the array. 
+- Once found, we determine if the target is located within this sorted half.
+  - If not, we eliminate that half from further consideration.
+  - Conversely, if the target does exist in the sorted half, we eliminate the other half.
+```cpp
+int findMin(vector<int>& arr) {
+    int low = 0, high = arr.size() - 1;
+    int ans = INT_MAX;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        //search space is already sorted then arr[low] will always be the minimum in that search space:
+        if (arr[low] <= arr[high]) {
+            ans = min(ans, arr[low]);
+            break;
+        }
+
+        //if left part is sorted:
+        if (arr[low] <= arr[mid]) {
+            // keep the minimum:
+            ans = min(ans, arr[low]);
+
+            // Eliminate left half:
+            low = mid + 1;
+        }
+        else { //if right part is sorted:
+
+            // keep the minimum:
+            ans = min(ans, arr[mid]);
+
+            // Eliminate right half:
+            high = mid - 1;
+        }
+    }
+    return ans;
+}
+```
+
+### How many times the array has been rotated:
+We will employ the same algorithm to determine the index of the minimum element. In the previous problem, we only stored the minimum element itself. However, in this updated approach, we will additionally keep track of the index. 
+```cpp
+int findKRotation(vector<int> &arr) {
+    int low = 0, high = arr.size() - 1;
+    int ans = INT_MAX;
+    int index = -1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        //search space is already sorted then arr[low] will always be the minimum in that search space:
+        if (arr[low] <= arr[high]) {
+            if (arr[low] < ans) {
+                index = low;
+                ans = arr[low];
+            }
+            break;
+        }
+
+        //if left part is sorted:
+        if (arr[low] <= arr[mid]) {
+            // keep the minimum:
+            if (arr[low] < ans) {
+                index = low;
+                ans = arr[low];
+            }
+
+            // Eliminate left half:
+            low = mid + 1;
+        }
+        else { //if right part is sorted:
+
+            // keep the minimum:
+            if (arr[mid] < ans) {
+                index = mid;
+                ans = arr[mid];
+            }
+
+            // Eliminate right half:
+            high = mid - 1;
+        }
+    }
+    return index;
+}
+```
