@@ -14,7 +14,7 @@ int binarySearch(vector<int>& nums, int target) {
         if (nums[mid] == target){
           return mid;
         } 
-        else if (target > nums[mid]){
+        else if (nums[mid] < target){
           low = mid + 1;
         }
         else{
@@ -157,7 +157,7 @@ pair<int, int> firstAndLastPosition(vector<int>& arr, int n, int k) {
 }
 ```
 
-#### Binary Search:
+#### Using Binary Search:
 ```cpp
 int firstPos(vector<int>& nums, int target){
         int n = nums.size();
@@ -205,7 +205,7 @@ int firstPos(vector<int>& nums, int target){
     }
 ```
 
-### Search in Sorted Array:
+### Search in Rotated Array:
 #### Unique Elements:
 To efficiently search for a target value using this observation, we will follow a simple two-step process. 
 - First, we identify the sorted half of the array. 
@@ -305,6 +305,11 @@ int findMin(vector<int>& arr) {
 ```
 
 ### How many times the array has been rotated:
+
+**Brute force:**
+- ans = INT_MAX , index = -1;
+- Next, we will iterate through the array and compare each element with the variable called ‘ans’. Whenever we encounter an element ‘arr[i]’ that is smaller than ‘ans’, we will update ‘ans’ with the value of ‘arr[i]’ and also update the ‘index’ variable with the corresponding index value, ‘i’. Return index.
+
 We will employ the same algorithm to determine the index of the minimum element. In the previous problem, we only stored the minimum element itself. However, in this updated approach, we will additionally keep track of the index. 
 ```cpp
 int findKRotation(vector<int> &arr) {
@@ -350,6 +355,11 @@ int findKRotation(vector<int> &arr) {
 ```
 
 ### Single Element in a Sorted Array
+- If the middle element is at an even index, then the single element must be on the right side of the array, since all the elements on the left side should come in pairs.
+- Similarly, if the middle element is at an odd index, then the single element must be on the left side of the array.
+
+> Another interesting observation you might have made is that this algorithm will still work even if the array isn't fully sorted. As long as pairs are always grouped together in the array (for example, [10, 10, 4, 4, 7, 11, 11, 12, 12, 2, 2]), it doesn't matter what order they're in. Binary search worked for this problem because we knew the subarray with the single number is always odd-lengthed, not because the array was fully sorted numerically
+
 ```cpp
 int singleNonDuplicate(vector<int>& nums) {
         int left = 0, right = nums.size() - 1;
@@ -369,9 +379,12 @@ int singleNonDuplicate(vector<int>& nums) {
 ```
 
 ### Find Peak Element:
+- Assume only one peak
+>If an index is a common point where a decreasing sequence ends and an increasing sequence begins, we can actually eliminate either the left or right half. Because both halves of such an index contain a peak.
+
 ```cpp
 int findPeakElement(vector<int> &arr) {
-    int n = arr.size(); //Size of array.
+    int n = arr.size(); 
 
     // Edge cases:
     if (n == 1) return 0;
