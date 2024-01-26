@@ -551,3 +551,22 @@ Node* reverse(Node* head, int k)
 
 -   **Time Complexity:** O(N).
 -   **Auxiliary Space:** O(1)
+
+## Detect a Cycle in a Linked List:
+- When the tortoise and hare enter the loop, they may be at different positions within the loop due to the difference in their speeds. The hare is moving faster, so it will traverse a greater distance in the same amount of time.
+- If there is no loop in the linked list, the hare will eventually reach the end, and the algorithm will terminate without a meeting occurring.
+### CODE:
+```cpp
+bool hasCycle(ListNode *head) {
+        if (!head) 
+            return false;
+        ListNode *slow = head, *fast = head;
+        while (fast->next && fast->next->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+            if (slow == fast) 
+                return true;
+        }
+        return false;
+    }
+```
