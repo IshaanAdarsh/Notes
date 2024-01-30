@@ -5,7 +5,7 @@
 - size(): Return the number of remaining elements in the stack.
 
 ## Implement Stack using Array:
-```
+```cpp
 class Stack {
   int size;
   int * arr;
@@ -35,7 +35,7 @@ class Stack {
 ```
 
 ## Implement Stack using single Queue
-```
+```cpp
 class Stack {
   queue < int > q;
   public:
@@ -63,7 +63,7 @@ class Stack {
 ```
 
 ## Implement stack using linked list:
-```
+```cpp
 struct stackNode {
   int data;
   stackNode * next;

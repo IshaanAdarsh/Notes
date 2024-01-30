@@ -2,7 +2,7 @@
 
 ### Brute Force:
 - Bad Idea
-```
+```cpp
 double myPow(double x, int n) {
       double ans = 1.0;
       for (int i = 0; i < n; i++) {
@@ -14,7 +14,7 @@ double myPow(double x, int n) {
 
 ### Recursion:
 - We use Binary Exponentiation
-```
+```cpp
 // Time Complexity: O(logn)
 
 double myPow(double x, int n) {
