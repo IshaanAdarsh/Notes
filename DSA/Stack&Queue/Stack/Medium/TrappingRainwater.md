@@ -1,7 +1,7 @@
 # Trapping Rainwater:
 - We find the maximum prefix and maximum suffix for each block
 - If at a particular block the min(maxpre,maxsuf) is greater than the hight then only water can be stored.
-```
+```cpp
 int trap(vector<int>& height) {
         int n = height.size();
         int maxipre = height[0];
