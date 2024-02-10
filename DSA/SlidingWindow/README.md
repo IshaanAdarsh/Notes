@@ -23,6 +23,43 @@ for(int i -> 0){
     - First we set the sliding window
         - `j-i+1 < k` -> `j++`
     - When the condition is met `j-i+1==k` we need to maintain this size by `j++` && `i++` and apply the condition.
-    
-**Variable Window**: When we need to find smallest or largest window size
 
+```cpp
+while(j<size){
+    calculations;
+    if(winsize<k){
+        j++;
+    }
+    else if(winsize==k){
+        ans = calculation;
+        calculation to remove i from 
+        widow to maintain winsize
+    }
+}
+return ans;
+```
+
+**Variable Window**: When we need to find smallest or largest window size based on a given condition
+- We start with `i`= 0 and `j` = 0
+- We setup i and j to maximize or minimize the window size based on the condition given.
+
+```cpp
+while(j<size){
+    calculations;
+    if(cond<k){
+        j++;
+    }
+    else if(cond==k){
+        ans = calculation;
+        j++;
+    }
+    else if(cond>k){
+        while(cond>k){
+            remove calculations for i
+            i++;
+        }
+        j++;
+    }
+}
+return ans;
+```

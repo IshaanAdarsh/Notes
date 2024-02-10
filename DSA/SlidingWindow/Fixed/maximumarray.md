@@ -8,10 +8,14 @@ Use 2 loops to calculate the maximum.
 -  When shifting our window, we push the new element in from the rear of our de-queue.
 - Every time before entering a new element, we first need to check whether the element present at the front is out of bounds of our present window size. If so, we need to pop that out. 
 - We need to check from the rear that the element present is smaller than the incoming element. 
-    - If yes, there’s no point storing them and hence we pop them out. 
+    - If yes, there’s no point storing them and hence we pop them out. (No need to store smaller elements on the left of `j`)
     - The element present at the front would be our largest element.
 
 ```cpp
+/*
+Time Complexity: O(N)
+Space Complexity: O(K)
+*/
 vector < int > maxSlidingWindow(vector < int > & nums, int k) {
   deque < int > dq;
   vector < int > ans;
