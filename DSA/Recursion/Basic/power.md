@@ -16,7 +16,6 @@ double myPow(double x, int n) {
 - We use Binary Exponentiation
 ```cpp
 // Time Complexity: O(logn)
-
 double myPow(double x, int n) {
   double ans = 1.0;
   long long nn = n;

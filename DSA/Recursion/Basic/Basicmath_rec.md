@@ -57,3 +57,33 @@ bool palindrome(int i, string& s){
     return palindrome(i+1,s);
 }
 ```
+
+# Permutation and Combination:
+```cpp
+// Combination
+int nCr(int N, int r)
+{
+    int res = 0;
+    if (r == 0) {
+        return 1;
+    }
+    else {
+        res = nCr(N, r - 1)
+              * (N - r + 1) / r;
+    }
+    return res;
+}
+
+// Permutation:
+int fact(int n)
+{
+    if (n <= 1)
+        return 1;
+    return n * fact(n - 1);
+}
+ 
+int nPr(int n, int r)
+{
+    return fact(n) / fact(n - r);
+}
+```
