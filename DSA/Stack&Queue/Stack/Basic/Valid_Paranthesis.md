@@ -30,3 +30,44 @@ bool isValid(string s) {
         return st.empty(); 
     }
 ```
+
+## Longest Valid Parenthesis:
+
+```cpp
+int longestValidParentheses(string s) {
+    stack<int>stk;
+    stk.push(-1);
+    int ans = 0;
+    for(int i = 0 ; i < s.size();  i++)
+    {
+        if(s[i] == '(')
+            stk.push(i);
+        else
+        {
+            if(stk.size() == 1)
+                stk.top() = i;
+            else
+            {
+                stk.pop();
+                ans = max(ans , i - stk.top());
+            }
+        }
+    }
+    return ans;
+}
+```
+
+### Dry Run:
+- `)()())`
+
+| Index | Character | Operation | Stack         | Result |
+|-------|-----------|-----------|---------------|--------|
+| 0     | (         | Push      | [-1, 0]       | 0      |
+| 1     | (         | Push      | [-1, 0, 1]    | 0      |
+| 2     | )         | Pop       | [-1, 0]       | 2      |
+| 3     | (         | Push      | [-1, 0, 3]    | 2      |
+| 4     | )         | Pop       | [-1, 0]       | 4      |
+| 5     | )         | Pop       | [-1]          | 6      |
+| 6     | (         | Push      | [-1, 6]       | 6      |
+| 7     | )         | Push      | [-1, 6, 7]    | 6      |
+| 8     | )         | Pop       | [-1, 6]       | 6      |

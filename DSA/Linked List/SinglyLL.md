@@ -274,7 +274,7 @@ Node *findMiddle(Node* head){
 
 ```c++
 Node *findMiddle(Node* head){
-  if(head == NULL || hea -> next == NULL)
+  if(head == NULL || head -> next == NULL)
     return head;
   
   //2 node - needed or not ?

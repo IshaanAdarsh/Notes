@@ -1,7 +1,5 @@
 # Fibonacci:
-- Use the formula `Fibonacci(N) = Fibonacci(N-1) + Fibonacci(N-2)
-`
-
+- Use the formula `Fibonacci(N) = Fibonacci(N-1) + Fibonacci(N-2)`  
 ```cpp
 int fib(int n) {
         if(n==0){
