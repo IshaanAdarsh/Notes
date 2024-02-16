@@ -85,5 +85,24 @@ int fib(int n){
     }
     return prev;
 }
+```
 
+# Counting Stairs:
+- Similar to fibonacci sequence where we just replace a single line -> `when n==0 we return 1` as when we want to go to the 0th stair, then we have only one option.
+
+
+```cpp
+class Solution {
+public:
+    int climbStairs(int n) {
+        vector<int>dp(n+1,-1);
+        // Only difference
+        dp[0]=1;
+        dp[1]=1;
+        for(int i =2;i<=n;i++){
+            dp[i]=dp[i-1]+dp[i-2];
+        }
+        return dp[n];
+    }
+};
 ```
